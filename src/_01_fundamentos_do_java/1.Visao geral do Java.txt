@@ -1,0 +1,139 @@
+Introdução
+
+    Java é uma das linguagens de programação mais utilizadas no mundo. Foi desenvolvida pela Sun Microsystems em 1995 
+e atualmente pertence à Oracle Corporation. Java é popular por ser versátil, confiável e poder ser executada em diversos 
+tipos de computadores e dispositivos.
+
+O que é Java?
+    
+    Java é uma linguagem de programação de alto nível, orientada a objetos, projetada para ser independente de plataforma, 
+o que significa que você pode escrever código uma vez e executá-lo em qualquer lugar com a Máquina Virtual Java (JVM). É 
+fácil de aprender para iniciantes é amplamente utilizada para criar aplicativos web, móveis e corporativos. Java é conhecido 
+por sua robustez, recursos de segurança e versatilidade. Ela suporta código modular e reutilizável por meio de seus princípios 
+de orientação a objetos e vem com um rico conjunto de bibliotecas e frameworks para agilizar o desenvolvimento.
+    
+    Vamos entender algumas frases importantes da definição acima:
+    *   LINGUAGEM DE ALTO NÍVEL: 
+        Java é uma linguagem de programação de alto nível, o que significa que é próxima da linguagem humana e abstraída do hardware 
+        da máquina, facilitando a leitura e a escrita.
+
+    *   ORIENTADA A OBJETOS: 
+        Java se baseia no conceito de "objetos", que podem conter dados e métodos. Isso permite código modular e reutilizável. Os 
+        principais conceitos incluem classes, objetos, herança, polimorfismo, encapsulamento e abstração.
+
+    *   INDEPENDENTE DE PLATAFORMA: 
+        Java foi projetado para ser (WORA) "escreva uma vez, execute em qualquer lugar" . Isso significa que programas Java podem ser 
+        executados em qualquer dispositivo ou sistema operacional que tenha a Máquina Virtual Java (JVM) instalada. A JVM interpreta o 
+        código Java compilado (bytecode) e o executa na máquina host.
+
+    *   MÁQUINA VIRTUAL JAVA (JVM): 
+        A Máquina Virtual Java (JVM) é um ambiente de execução independente de plataforma que executa bytecode Java. Ela permite que programas 
+        Java sejam executados em qualquer dispositivo ou sistema operacional, interpretando o código Java compilado e convertendo-o em instruções 
+        específicas da máquina. Isso possibilita o recurso "escreva uma vez, execute em qualquer lugar" do Java.
+    
+    
+Principais Recursos do Java
+
+Vamos dar uma olhada nos principais recursos do Java.
+    *   INDEPENDENCIA DE PLATAFORMA:
+        Java é conhecido por sua capacidade de "escreva uma vez, execute em qualquer lugar". Isso significa que você pode escrever código Java em 
+        um computador e executá-lo em qualquer outro que tenha Java instalado. Isso é possível porque o código Java é compilado em bytecode, que 
+        pode ser executado em qualquer dispositivo com uma Máquina Virtual Java (JVM).
+
+    *   SIMPLES:
+        Java é muito fácil de aprender e seguir. Sua sintaxe é direta e fácil de entender. Programadores com conhecimento básico de outras linguagens 
+        orientadas a objetos, como C++, podem se familiarizar rapidamente com Java.
+
+    *   SEGURO:
+        Java possui fortes recursos de segurança que protegem contra ameaças e vulnerabilidades. Ele fornece um ambiente seguro para o desenvolvimento 
+        e a execução de aplicativos, o que é crucial para aplicativos baseados na internet. Os aplicativos Java são livres de vírus e podem operar em um 
+        ambiente de execução seguro.
+
+    *   ROBUSTO:
+        Java é robusto devido ao seu forte gerenciamento de memória, ausência de ponteiros, tratamento de exceções e coleta automática de lixo. Esses 
+        recursos ajudam a construir aplicativos confiáveis ​​e livres de erros.
+
+    *   PORTÁTIL:
+        Java é portátil porque você pode executar o bytecode Java em qualquer hardware que tenha uma JVM compatível. Isso significa que o código Java 
+        é independente de plataforma, tanto no nível de origem quanto no binário.
+
+    *   Multithread
+        Java suporta programação multithread, onde múltiplas threads podem ser executadas simultaneamente. Esse recurso é útil para executar várias 
+        tarefas simultaneamente em um programa, melhorando o desempenho dos aplicativos.
+
+    *   DISTRIBUÍDO:
+        O Java foi projetado para ser usado em ambientes distribuídos. Aplicativos Java podem ser distribuídos entre várias máquinas usando tecnologias 
+        como Invocação de Método Remoto (RMI) e Enterprise JavaBeans (EJB).
+
+    *   DINÂMICO:
+        Java é uma linguagem dinâmica, pois suporta o carregamento de classes em tempo de execução. Isso permite que os programas sejam mais flexíveis e 
+        adaptáveis ​​a ambientes em constante mudança.
+
+    *   EXTENSÍVEL:
+        Java é extensível porque permite a criação de novas classes por meio de herança. Você pode adicionar novos métodos a classes existentes ou criar 
+        novas subclasses, tornando os aplicativos Java altamente escaláveis.
+
+    *   PROGRAMAÇÃO EM ESTILO FUNCIONAL:
+        Com a introdução de expressões lambda, interfaces funcionais e a API Stream no Java 8, o Java agora oferece suporte a um estilo funcional de programação. 
+        Isso facilita a escrita de código mais limpo e legível para tarefas complexas.
+
+    Você aprenderá mais sobre esses recursos do Java nos próximos capítulos.
+
+
+Tipos de Aplicativos que Você Pode Construir Usando Java
+
+    Java é uma linguagem de programação versátil que pode ser usada para construir vários tipos de aplicativos. Aqui estão alguns tipos comuns:
+    1.  APLICAÇÕES WEB: 
+        Java é amplamente utilizado para a construção de aplicações web dinâmicas e interativas. Frameworks como Spring, Struts e JavaServer Faces (JSF) são populares 
+        para desenvolvimento web.
+
+    2.  APLICATIVOS MÓVEIS: 
+        Java é a linguagem principal para o desenvolvimento de aplicativos Android. Ferramentas como o Android Studio e o Android SDK facilitam a criação de aplicativos 
+        móveis para dispositivos Android.
+
+    3.  APLICAÇÕES CORPORATIVAS: 
+        Java é uma ótima opção para aplicações de nível empresarial, como sistemas de gestão de relacionamento com o cliente (CRM), sistemas de planejamento de recursos 
+        empresariais (ERP) e aplicações financeiras de larga escala. O Java Enterprise Edition (Java EE) fornece um conjunto de especificações e frameworks para a construção 
+        de aplicações corporativas robustas e escaláveis.
+
+    4.  APLICAÇÕES DESKTOP: 
+        Java pode ser usado para criar aplicações desktop multiplataforma. Ferramentas como JavaFX e Swing são usadas para construir interfaces gráficas de usuário (GUIs) para 
+        aplicações desktop.
+
+    5.  JOGOS: 
+        Java pode ser usado para desenvolvimento de jogos, especialmente para Android. Bibliotecas e engines como a LibGDX ajudam os desenvolvedores a criar jogos 2D e 3D.
+    
+    6.  SISTEMAS EMBARCADOS: 
+        Java é usado em sistemas embarcados e dispositivos de Internet das Coisas (IoT). Seus recursos de portabilidade e segurança o tornam adequado para o desenvolvimento 
+        de software para pequenos dispositivos, como sensores e aparelhos inteligentes.
+
+    7.  TECNOLOGIAS DE BIG DATA: 
+        Java é usado em tecnologias de big data, como Hadoop e Apache Spark. Essas estruturas utilizam Java para processar e analisar grandes conjuntos de dados.
+
+    8.  APLICATIVOS BASEADOS EM NUVEM: 
+        Java é usado para criar aplicativos em nuvem escaláveis. Plataformas como AWS, Google Cloud e Microsoft Azure oferecem suporte a Java para a criação de aplicativos e 
+        serviços nativos em nuvem.
+
+    9.  APLICAÇÕES CIENTÍFICAS: 
+        Java é usado em aplicações científicas para análise de dados, simulação e pesquisa. Sua portabilidade e desempenho o tornam adequado para computação científica.
+
+    Esses vários tipos de aplicativos demonstram a flexibilidade e o poder do Java como linguagem de programação.
+
+
+Por que aprender Java?
+
+    *   VERSATILIDADE: 
+        Java é usado em desenvolvimento web, aplicativos mobile (especialmente Android), aplicativos desktop e sistemas corporativos de grande porte.
+
+    *   OPORTUNIDADES DE EMPREGO: 
+        Desenvolvedores Java são muito procurados, e aprender Java pode abrir muitas oportunidades de carreira.
+
+    *   FACILIDADE DE APRENDIZADO: 
+        A sintaxe Java é simples e há muitos recursos disponíveis para ajudar iniciantes.
+
+
+CONCLUSÃO:
+
+    Java é uma linguagem de programação poderosa e versátil, ideal tanto para iniciantes quanto para desenvolvedores experientes. Sua independência de plataforma, recursos 
+orientados a objetos, segurança robusta e bibliotecas abrangentes a tornam uma escolha popular para uma ampla gama de aplicações. Seja para quem está começando a programar 
+ou para quem busca expandir suas habilidades, aprender Java é um investimento valioso.
