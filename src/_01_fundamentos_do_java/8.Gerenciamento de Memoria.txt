@@ -1,0 +1,95 @@
+Gerenciamento de memória Java
+
+Introdução
+
+    O gerenciamento de memória é uma parte crucial da programação que garante que seus aplicativos funcionem sem problemas, sem ficar sem memória ou travar. 
+Java cuida da maioria das tarefas de gerenciamento de memória por meio de seu sistema automático de coleta de lixo. Isso facilita a escrita de código sem a 
+preocupação de gerenciar a memória manualmente. Neste capítulo, explicaremos os conceitos básicos de gerenciamento de memória e coleta de lixo em Java em 
+termos simples.
+
+
+O que é Gerenciamento de Memória?
+    O gerenciamento de memória envolve alocar e desalocar memória para várias partes de um programa. Em Java, esse processo é amplamente automatizado, o que 
+significa que a Máquina Virtual Java (JVM) se encarrega de alocar memória para novos objetos e liberar a memória que não é mais necessária.
+
+
+Conceitos-chave em gerenciamento de memória Java
+
+*   Heap e pilha
+    Java usa duas áreas principais de memória para gerenciar dados: o heap e a pilha.
+
+
+        1.  Memória Heap:
+            É aqui que o Java armazena objetos. Quando você cria um novo objeto usando a palavra-chave new, ele é alocado no heap.
+            Exemplo:
+                String str = new String("Hello, World!");
+
+        2.  Memória de Pilha:
+            É aqui que o Java armazena chamadas de métodos e variáveis ​​locais. Cada vez que um método é chamado, um novo bloco é criado na pilha para armazenar as 
+        variáveis ​​e os parâmetros do método. Quando o método termina, esse bloco é removido da pilha.
+
+
+*   Coleta de Lixo
+        A coleta de lixo é o processo pelo qual o Java libera memória automaticamente, removendo objetos que não são mais necessários. Isso ajuda a evitar vazamentos 
+    de memória e permite que o programa use a memória de forma eficiente.
+
+
+    
+Como funciona a coleta de lixo
+    O coletor de lixo do Java trabalha em segundo plano para gerenciar a memória. Aqui está uma explicação simples de como ele funciona:
+
+    1.  Criação de Objetos:
+        Quando você cria um objeto, ele é armazenado no heap.
+        Exemplo:
+            String str = new String("Hello, World!");
+
+    2.  Acessibilidade:
+        *   Um objeto é considerado acessível se puder ser acessado ou usado pelo seu programa.
+        *   Se não houver referências a um objeto, ele se torna inacessível e é elegível para coleta de lixo.
+
+    3.  Processo de Coleta de Lixo:
+        *   O coletor de lixo verifica periodicamente se há objetos inacessíveis.
+        *   Em seguida, ele recupera a memória usada por esses objetos, tornando-a disponível para novos objetos.
+
+    
+Exemplo Simples
+
+    Digamos que você tenha o seguinte código:
+    public class Example {
+        public static void main(String[] args) {
+            String str = new String("Hello, World!");
+            str = null; // str no longer references the "Hello, World!" object
+        }
+    }
+
+    Neste exemplo:
+
+    *   Um novo objeto String é criado e atribuído à variável str.
+    *   A variável str é então definida como nula, o que significa que ela não faz mais referência ao objeto String.
+    *   O objeto String "Hello, World!" torna-se inacessível e está qualificado para coleta de lixo.
+
+
+Por que a Coleta de Lixo é Importante
+    A coleta de lixo é importante porque ajuda a gerenciar a memória automaticamente, reduzindo o risco de vazamentos de memória e melhorando o 
+desempenho do seu aplicativo. Sem a coleta de lixo, você precisaria rastrear e liberar memória manualmente, o que é complexo e propenso a erros.
+
+
+Benefícios do Gerenciamento Automático de Memória do Java
+
+    *   Simplicidade:
+        Você não precisa gerenciar a memória manualmente, o que simplifica a codificação e reduz a probabilidade de erros.
+
+    *   Eficiência:
+        O coletor de lixo otimiza o uso da memória, garantindo que seu aplicativo seja executado com eficiência.
+
+    *   Confiabilidade:
+        O gerenciamento automático de memória ajuda a evitar vazamentos de memória, tornando seu aplicativo mais confiável e estável.
+
+
+    Conclusão
+        O sistema de gerenciamento de memória e coleta de lixo do Java facilita a escrita de código eficiente e confiável pelos desenvolvedores. Ao 
+    lidar automaticamente com a alocação e a desalocação de memória, o Java permite que você se concentre na construção da sua aplicação sem se preocupar 
+    com detalhes de gerenciamento de memória de baixo nível. Entender esses princípios básicos ajudará você a entender como o Java gerencia recursos e mantém 
+    sua aplicação funcionando sem problemas.
+
+    
