@@ -1,0 +1,94 @@
+Escrevendo seu primeiro programa Java
+
+Introdução
+    Agora que você configurou seu ambiente de desenvolvimento Java, é hora de escrever e executar seu primeiro programa Java. Neste capítulo, 
+mostraremos como criar um programa Java simples, compilá-lo e executá-lo em seu computador.
+
+
+Etapa 1: Criar um novo arquivo Java
+
+    Escolhendo um editor de texto ou IDE
+    
+        Antes de escrever seu primeiro programa Java, você precisa de um editor de texto ou de um Ambiente de Desenvolvimento Integrado (IDE) 
+        para escrever seu código. Algumas opções populares incluem:
+
+        *   Editores de Texto: Bloco de Notas, Sublime Text, Visual Studio Code
+        *   IDEs: IntelliJ IDEA, Eclipse, NetBeans
+
+    Neste capítulo, usaremos um editor de texto simples, mas os passos são semelhantes se você optar por usar um IDE.
+
+    Criando o Arquivo
+    1.  Abra seu Editor de Texto:
+        *   Abra seu editor de texto ou IDE preferido.
+
+    2.  Criar um Novo Arquivo:
+        *   Crie um novo arquivo e nomeie-o HelloWorld.java. O nome do arquivo deve corresponder ao nome da classe e deve ter a extensão .java.
+
+
+
+Etapa 2: Escreva o código Java
+
+    No seu arquivo HelloWorld.java, digite o seguinte código:
+    public class HelloWorld {
+        public static void main(String[] args) {
+            System.out.println("Hello, World!");
+        }
+    }
+
+    Explicação do Código:
+
+    *   public class HelloWorld:
+        Esta linha declara uma classe pública chamada HelloWorld. Em Java, toda aplicação deve ter pelo menos uma definição de classe.
+
+    *   public static void main(String[] args):
+        Esta linha declara o método main, que é o ponto de entrada de qualquer programa Java. O método main é onde o programa inicia a execução.
+
+    *   System.out.println(“Hello, World!”);
+        Esta linha imprime o texto “Hello, World!” no console. System.out é um fluxo de saída usado para imprimir texto, e println é um método que 
+        imprime a string especificada seguida por uma nova linha.
+
+
+Etapa 3: Compilar o programa Java
+    
+    Antes de executar seu programa Java, você precisa compilá-lo em bytecode que a Máquina Virtual Java (JVM) possa entender.
+
+    1.  Abra o Prompt de Comando ou Terminal:
+        *   Abra o Prompt de Comando (Windows) ou o Terminal (macOS/Linux).
+
+    2.  Navegue até o Diretório:
+        *   Use o comando cd para navegar até o diretório onde você salvou HelloWorld.java. Por exemplo:
+        #cd path/to/your/java/file
+
+    3.  Compilar o programa:
+        *   Digite o seguinte comando para compilar seu programa Java:
+            #javac HelloWorld.java
+
+        *   Se não houver erros no seu código, este comando criará um arquivo chamado HelloWorld.class no mesmo diretório.
+
+
+Etapa 4: execute o programa Java
+
+    Agora que seu programa está compilado, você pode executá-lo usando a JVM.
+
+    1.  Executando o Programa:
+        *   No prompt de comando ou terminal, digite o seguinte comando:
+            #java HelloWorld
+
+        *   Você deverá ver a saída:
+            Hello, World!
+
+        
+    Solução de problemas (troubleshooting)
+    *   Se você vir um erro dizendo que javac ou java não é reconhecido:
+        Certifique-se de ter instalado o JDK e configurado suas variáveis ​​de ambiente corretamente.
+
+    *   Se houver erros de compilação:
+        Verifique novamente se há erros de digitação no código e certifique-se de que o nome do arquivo corresponda ao nome da classe.
+
+
+Conclusão
+
+    Neste capítulo, você aprendeu a escrever, compilar e executar um programa Java simples. Esse conhecimento básico é crucial para você começar 
+sua jornada na programação Java. Com seu ambiente de desenvolvimento configurado e seu primeiro programa executado com sucesso, você está pronto 
+para explorar conceitos Java mais complexos e começar a construir seus próprios aplicativos. Boa programação!
+
