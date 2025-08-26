@@ -1,0 +1,211 @@
+Variáveis ​​Java
+
+Introdução
+    Variáveis ​​são fundamentais na programação, pois são usadas para armazenar dados que podem ser manipulados e recuperados durante a execução do programa. 
+Neste capítulo, exploraremos o conceito de variáveis ​​em Java, os diferentes tipos de variáveis, como declará-las e inicializá-las, além do escopo e do tempo 
+de vida das variáveis.
+
+
+O que é uma variável?
+    Uma variável é um contêiner que contém dados que podem ser alterados durante a execução de um programa. Cada variável em Java possui um tipo de dado, um 
+nome e um valor.
+
+    Pontos Principais:
+        *   Tipo de Dado: 
+            Determina o tipo de dado que uma variável pode conter (ex.: int, float, String).
+
+        *   Nome: 
+            Um identificador usado para referenciar a variável.
+
+        *   Valor: 
+            Os dados armazenados na variável.
+
+
+    Tipos de Variáveis
+        Java suporta diversos tipos de variáveis, categorizadas com base em seu escopo e tempo de vida. Estas incluem:
+
+        *   Variáveis ​​Locais
+        *   Variáveis ​​de Instância (Campos Não Estáticos)
+        *   Variáveis ​​de Classe (Campos Estáticos)
+
+
+    Variáveis ​​Locais
+        Variáveis ​​locais são declaradas dentro de um método, construtor ou bloco e só podem ser acessadas dentro desse método, construtor ou bloco.
+
+    Pontos Principais:
+        *   Escopo: 
+            Limitado ao bloco de código onde são declaradas.
+
+        *   Tempo de Vida: 
+            Existir apenas durante a execução do bloco em que são declaradas.
+
+    Exemplo:
+        public class Example {
+            public void display() {
+                int localVar = 10; // Local variable
+                System.out.println("Local Variable: " + localVar);
+            }
+        }
+
+
+    Variáveis ​​de Instância
+        Variáveis ​​de Instância são declaradas dentro de uma classe, mas fora de qualquer método, construtor ou bloco. Elas são específicas para cada instância 
+    de uma classe.
+
+    Pontos Principais:
+        *   Escopo: 
+            Acessível por todos os métodos, construtores e blocos da classe.
+
+        *   Tempo de Vida: 
+            Existe enquanto o objeto existir na memória.
+    
+    Exemplo:
+    public class Example {
+        int instanceVar; // Instance variable
+        public void display() {
+            System.out.println("Instance Variable: " + instanceVar);
+        }
+    }
+
+    Variáveis ​​de Classe
+        Variáveis ​​de Classe são declaradas com a palavra-chave static dentro de uma classe, mas fora de qualquer método, construtor ou bloco. Elas são compartilhadas 
+    entre todas as instâncias de uma classe.
+
+    Pontos Principais:
+    *   Escopo: 
+        Acessível por todos os métodos, construtores e blocos da classe.
+
+    *   Tempo de Vida: 
+        Existe enquanto durar o programa.
+    
+    Exemplo:
+        public class Example {
+            static int classVar; // Class variable
+            public void display() {
+                System.out.println("Class Variable: " + classVar);
+            }
+    }
+
+
+    Declarando e Inicializando Variáveis
+
+    *   Declaração
+        Para declarar uma variável em Java, você especifica o tipo de dado seguido do nome da variável.
+
+    Sintaxe:
+        <dataType> <variableName>;
+
+    Example:
+        int number;
+        String name;
+
+
+    *   Inicialização
+    Para inicializar uma variável, você atribui um valor a ela usando o operador de atribuição =.
+
+    Sintaxe:
+        <dataType> <variableName> = value;
+
+    Examplo:    
+    int number = 10;
+    String name = "Alice";
+
+
+    *   Declaração e Inicialização Combinadas
+    Você pode declarar e inicializar uma variável em uma única instrução.
+
+    Exemplo:
+        int number = 10;
+        String name = "Alice";
+
+
+    *   Convenções de Nomenclatura de Variáveis
+    Em Java, os nomes de variáveis ​​devem seguir certas convenções para melhorar a legibilidade e a manutenção do código.
+
+    Regras:
+
+        *   Comece com uma letra, cifrão ($) ou sublinhado (_).
+        *   Os caracteres subsequentes podem ser letras, dígitos, cifrões ou sublinhados.
+        *   Diferencia maiúsculas de minúsculas.
+        *   Não é possível usar palavras-chave reservadas.
+
+
+    Melhores Práticas:
+
+        *   Use nomes significativos: 
+            Escolha nomes que descrevam claramente a finalidade da variável.
+
+        *   CabeloCaso: 
+            Use camelCase para nomes de variáveis ​​(por exemplo, ValorTotal, NomeAluno).
+
+
+Escopo e Tempo de Vida de Variáveis
+
+Escopo
+
+    O escopo de uma variável é a região do código onde a variável pode ser acessada.
+
+    *   Variáveis ​​Locais: 
+        O escopo é limitado ao método, construtor ou bloco onde são declaradas.
+
+    *   Variáveis ​​de Instância: 
+        O escopo é a classe inteira, acessível por todos os métodos, construtores e blocos da classe.
+
+    *   Variáveis ​​de Classe: 
+        O escopo é a classe inteira, acessível por todos os métodos, construtores e blocos da classe.
+
+
+Tempo de Vida
+    O tempo de vida de uma variável é a duração pela qual ela existe na memória.
+
+    *   Variáveis ​​Locais: 
+        Existem apenas durante a execução do bloco em que são declaradas.
+
+    *   Variáveis ​​de Instância: 
+        Existem enquanto o objeto existir na memória.
+
+    *   Variáveis ​​de Classe: 
+        Existem durante a duração do programa.
+
+
+Programa de Exemplo
+    Aqui está um programa de exemplo simples que demonstra o uso de variáveis ​​locais, de instância e de classe:
+
+public class VariableExample {
+    // Class variable
+    static int classVar = 10;
+
+    // Instance variable
+    int instanceVar;
+
+    // Constructor
+    public VariableExample(int instanceVar) {
+        this.instanceVar = instanceVar;
+    }
+
+    // Method
+    public void display() {
+        // Local variable
+        int localVar = 20;
+        System.out.println("Local Variable: " + localVar);
+        System.out.println("Instance Variable: " + instanceVar);
+        System.out.println("Class Variable: " + classVar);
+    }
+
+    public static void main(String[] args) {
+        VariableExample example = new VariableExample(30);
+        example.display();
+    }
+}
+
+Saída:
+
+Variável local: 20
+Variável de instância: 30
+Variável de classe: 10
+
+
+Conclusão
+    Neste capítulo, exploramos o conceito de variáveis ​​em Java, incluindo os diferentes tipos de variáveis, como declará-las e inicializá-las, seu escopo e tempo 
+de vida. Entender variáveis ​​é essencial para uma programação Java eficaz, pois elas são fundamentais para armazenar e manipular dados. Seguindo as convenções de 
+nomenclatura adequadas e entendendo o escopo e o tempo de vida das variáveis, você pode escrever um código Java mais legível e de fácil manutenção.
