@@ -1,0 +1,177 @@
+Operadores Relacionais Java
+
+
+Introdução
+    Operadores relacionais em Java são usados ​​para comparar dois valores ou variáveis. Esses operadores retornam um valor booleano (verdadeiro ou falso) com base no 
+atendimento da condição especificada. Operadores relacionais são comumente usados ​​em instruções de fluxo de controle, como instruções if, laços e expressões condicionais, 
+para tomar decisões em código.
+
+
+Pontos Principais:
+    *   Comparação: 
+        Operadores relacionais comparam dois operandos.
+
+    *   Resultado Booleano: 
+        O resultado de uma operação relacional é sempre verdadeiro ou falso.
+
+    *   Uso em Fluxo de Controle: 
+        Frequentemente usado em condições para laços if, while e for.
+
+
+
+Lista de Operadores Relacionais
+
+Java fornece os seguintes operadores relacionais:
+    |----------------------------------------------------------------------------|
+    | Operator  |      Descrição    |  Exemplo  |               Saída            |  
+    |----------------------------------------------------------------------------|
+    |    ==     |     igual a       |  a == b   |     true se a e igual a b      |
+    |----------------------------------------------------------------------------|
+    |    !=     |   nao igual a     |  a != b   |   true se a e diferente de b   |    
+    |----------------------------------------------------------------------------|
+    |    >      |    maior que      |  a > b    |     true se a e maior que b    |            
+    |----------------------------------------------------------------------------|
+    |    <      |    menor que      |  a < b    |     true se a e menor que b    |             
+    |----------------------------------------------------------------------------|
+    |    >=     | maior ou igual a  |  a >= b   | true se a e maior ou igual a b |              |
+    |----------------------------------------------------------------------------|
+    |    <=     | menor ou igual a  |  a <= b   | true se a e menor ou igual a b |
+    |----------------------------------------------------------------------------|
+   
+
+   Exemplos Detalhados de Operadores Relacionais
+    Vamos explorar cada operador relacional com exemplos.
+
+    1. Igual a (==)
+        O ​​operador == verifica se dois operandos são iguais.
+
+        public class EqualToExample {
+            public static void main(String[] args) {
+                int a = 5;
+                int b = 5;
+                boolean result = (a == b);  // true, since a equals b
+
+                System.out.println("a == b: " + result);  // Output: a == b: true
+            }
+        }    
+
+        Explicação:
+        Comparação: Os valores de a e b são comparados e, como são iguais, o resultado é verdadeiro.
+        Saída:
+        a == b: verdadeiro
+
+
+    2. Diferente de (!=)
+        O operador != verifica se dois operandos são diferentes.
+        public class NotEqualToExample {
+            public static void main(String[] args) {
+                int a = 5;
+                int b = 3;
+                boolean result = (a != b);  // true, since a does not equal b
+
+                System.out.println("a != b: " + result);  // Output: a != b: true
+            }
+        }
+
+    Explicação:
+        Comparação: Os valores de a e b são comparados e, como não são iguais, o resultado é verdadeiro.
+        Saída:
+        a != b: true   
+
+    
+    3. Maior que (>)
+        O operador > verifica se o operando da esquerda é maior que o operando da direita.
+        public class GreaterThanExample {
+            public static void main(String[] args) {
+                int a = 7;
+                int b = 5;
+                boolean result = (a > b);  // true, since a is greater than b
+
+                System.out.println("a > b: " + result);  // Output: a > b: true
+            }
+        }
+
+        Explicação:
+        Comparação: O valor de a é comparado com b e, como a é maior que b, o resultado é verdadeiro.
+        Saída:
+        a > b: verdadeiro
+
+    
+    4. Menor que (<)
+        O operador < verifica se o operando da esquerda é menor que o operando da direita.
+        public class LessThanExample {
+            public static void main(String[] args) {
+                int a = 3;
+                int b = 5;
+                boolean result = (a < b);  // true, since a is less than b
+
+                System.out.println("a < b: " + result);  // Output: a < b: true
+            }
+        }
+
+    Explicação:
+        Comparação: O valor de a é comparado com b e, como a é menor que b, o resultado é verdadeiro.
+        Saída:
+        a < b: verdadeiro    
+
+
+    5. Maior ou igual a (>=)
+        O operador >= verifica se o operando da esquerda é maior ou igual ao operando da direita.
+        public class GreaterThanOrEqualToExample {
+            public static void main(String[] args) {
+                int a = 5;
+                int b = 5;
+                boolean result = (a >= b);  // true, since a is equal to b
+
+                System.out.println("a >= b: " + result);  // Output: a >= b: true
+            }
+        }
+
+    Explicação:
+        Comparação: O valor de a é comparado com b e, como a é igual a b, o resultado é verdadeiro.
+        Saída:
+        a >= b: verdadeiro    
+
+
+    6. Menor ou igual a (<=)
+        O operador <= verifica se o operando da esquerda é menor ou igual ao operando da direita.
+        public class LessThanOrEqualToExample {
+            public static void main(String[] args) {
+                int a = 3;
+                int b = 5;
+                boolean result = (a <= b);  // true, since a is less than b
+
+                System.out.println("a <= b: " + result);  // Output: a <= b: true
+            }
+        }
+
+        Explicação:
+        Comparação: O valor de a é comparado com b e, como a é menor que b, o resultado é verdadeiro.
+        Saída:
+        a <= b: verdadeiro
+
+
+    Conclusão
+    Os operadores relacionais Java são essenciais para a tomada de decisões em seu código por meio da comparação de valores. Esses operadores são frequentemente usados 
+​​em instruções de fluxo de controle, como condições if e loops, para determinar o fluxo de execução com base em comparações.
+
+    Resumo:
+        *   Igual a (==): 
+            Verifica se dois valores são iguais.
+
+        *   Diferente de (!=): 
+                Verifica se dois valores não são iguais.
+
+        *   Maior que (>): 
+            Verifica se o valor à esquerda é maior que o valor à direita.
+
+        *   Menor que (<): 
+            Verifica se o valor à esquerda é menor que o valor à direita.
+
+        *   Maior ou Igual a (>=): 
+            Verifica se o valor à esquerda é maior ou igual ao valor à direita.
+
+        *   Menor ou Igual a (<=): 
+            Verifica se o valor à esquerda é menor ou igual ao valor à direita.   
+
+    
