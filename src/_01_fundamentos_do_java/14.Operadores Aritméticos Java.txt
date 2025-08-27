@@ -1,0 +1,146 @@
+Operadores Aritméticos Java
+
+
+Introdução
+    Java fornece um conjunto de operadores aritméticos usados ​​para realizar operações matemáticas comuns, como adição, subtração, multiplicação, divisão e módulo. 
+Esses operadores funcionam com tipos de dados numéricos como int, float, double e long. Entender como usar esses operadores de forma eficaz é fundamental para 
+realizar cálculos e manipular dados numéricos em Java.
+
+
+    Pontos Principais:
+        *   Operações Básicas: 
+            Operadores aritméticos realizam cálculos matemáticos essenciais.
+
+        *   Funciona com Tipos Numéricos: 
+            Opera com tipos de dados como int, float, double e long.
+
+        *   Precedência de Operadores: 
+            As operações aritméticas seguem uma ordem específica de precedência, que determina a sequência em que as operações são realizadas.
+
+    
+Lista de Operadores Aritméticos
+
+Java fornece os seguintes operadores aritméticos:
+    |----------------------------------------|---------|--------------------------------|
+    | Operator  |        Descrição           | Exemplo |             Saída              |  
+    |----------------------------------------|---------|--------------------------------|
+    |    +      |         Adição             |  a + b  | Soma de a e b                  |
+    |----------------------------------------|---------|--------------------------------|
+    |    -      |        Subtração           |  a - b  | Diferença entre a e b          |    
+    |----------------------------------------|---------|--------------------------------|
+    |    *      |      Multiplicação         |  a * b  | Produto de a e b               |            
+    |----------------------------------------|---------|--------------------------------|
+    |    /      |         Divisão            |  a / b  | Quociente de a dividido por b  |             
+    |----------------------------------------|---------|--------------------------------|
+    |    %      | Modulo (resto da divisao)  |  a % b  | Resto de a dividido por b      |
+    |----------------------------------------|---------|--------------------------------|
+
+
+    Exemplos Detalhados de Operadores Aritméticos
+
+    Vamos explorar cada operador aritmético com exemplos.
+
+    1. Adição (+)
+        O operador + soma dois operandos.
+
+        public class AdditionExample {
+            public static void main(String[] args) {
+                int a = 10;
+                int b = 5;
+                int sum = a + b;
+
+                System.out.println("Sum: " + sum);  // Output: Sum: 15
+            }
+        }
+
+    Explicação:
+        Operandos: a e b são os operandos, e sum armazena o resultado da adição deles.
+    Saída:   
+    Sum: 15
+
+
+    2. Subtração (-)
+        O operador - subtrai o segundo operando do primeiro.
+        public class SubtractionExample {
+            public static void main(String[] args) {
+                int a = 10;
+                int b = 5;
+                int difference = a - b;
+
+                System.out.println("Difference: " + difference);  // Output: Difference: 5
+            }
+        }
+
+    Explicação:
+        Operandos: a e b são os operandos, e a diferença armazena o resultado da subtração deles.
+    Saída:   
+    Difference: 5
+
+
+    3. Multiplicação (*)
+        O operador * multiplica dois operandos. 
+        public class MultiplicationExample {
+            public static void main(String[] args) {
+                int a = 10;
+                int b = 5;
+                int product = a * b;
+
+                System.out.println("Product: " + product);  // Output: Product: 50
+            }
+        }
+
+    Explicação:
+        Operandos: a e b são multiplicados, e o resultado é armazenado em produto.
+    Saída:    
+    Product: 50
+
+
+    4. Divisão (/)
+        O operador / divide o primeiro operando pelo segundo.
+        public class DivisionExample {
+            public static void main(String[] args) {
+                int a = 10;
+                int b = 5;
+                int quotient = a / b;
+
+                System.out.println("Quotient: " + quotient);  // Output: Quotient: 2
+            }
+        }
+
+    Explicação:
+        Operandos: a é dividido por b, e o resultado é armazenado em quociente.
+        Observação: Se ambos os operandos forem inteiros, o resultado será um inteiro (truncando qualquer parte fracionária).
+    Saída:
+    Quotient: 2
+
+
+    5. Módulo (%)
+        O operador % retorna o resto da divisão do primeiro operando pelo segundo.
+
+        public class ModulusExample {
+            public static void main(String[] args) {
+                int a = 10;
+                int b = 3;
+                int remainder = a % b;
+
+                System.out.println("Remainder: " + remainder);  // Output: Remainder: 1
+            }
+        }
+    
+    Explicação:
+        Operandos: a é dividido por b, e o resto dessa divisão é armazenado em resto.
+    Saída:
+    Remainder: 1
+
+
+Conclusão
+    Os operadores aritméticos de Java são fundamentais para a execução de operações matemáticas básicas em programação. Esses operadores são essenciais para a 
+manipulação de dados numéricos e são comumente usados ​​em diversas tarefas computacionais.
+
+    Resumo:
+    *   Adição (+): Soma dois operandos.
+    *   Subtração (-): Subtrai o segundo operando do primeiro.
+    *   Multiplicação (*): Multiplica dois operandos.
+    *   Divisão (/): Divide o primeiro operando pelo segundo.
+    *   Módulo (%): Retorna o resto da divisão do primeiro operando pelo segundo.
+
