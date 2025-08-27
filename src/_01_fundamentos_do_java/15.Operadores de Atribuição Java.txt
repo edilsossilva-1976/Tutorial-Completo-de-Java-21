@@ -1,0 +1,164 @@
+Operadores de Atribuição Java
+
+
+Introdução
+    Operadores de atribuição em Java são usados ​​para atribuir valores a variáveis. O operador de atribuição mais básico é =, que atribui o valor à direita à 
+variável à esquerda. Java também oferece uma variedade de operadores de atribuição compostos que combinam operações aritméticas com atribuição, facilitando a 
+escrita de código conciso e eficiente.
+
+    Pontos Principais:
+        *   Atribuição Básica: O operador = atribui o valor à direita à variável à esquerda.
+        *   Atribuição Composta: Combina operações aritméticas com atribuição para um código conciso.
+        *   Usos Múltiplos: Comumente usado para atualizar variáveis ​​e realizar operações aritméticas.
+
+
+    Lista de Operadores de Atribuição
+
+    Java fornece os seguintes operadores de atribuição:
+        |-------------------------------------------------------------|----------|----------------|
+        | Operator  |                  Descrição                      | Exemplo  | Equivalente a  |  
+        |-------------------------------------------------------------|----------|----------------|
+        |    =      |             atribuição simples                  |  a = b   |     a = b      |
+        |-------------------------------------------------------------|----------|----------------|
+        |    +=     |            atribuição de adição                 | a += b   |    a = a + b   |    
+        |-------------------------------------------------------------|----------|----------------|
+        |    -=     |           atribuição de subtração               | a -= b   |    a = a - b   |            
+        |-------------------------------------------------------------|----------|----------------|
+        |    *=     |          atribuição de multiplicação            | a *= b   |    a = a * b   |             
+        |-------------------------------------------------------------|----------|----------------|
+        |    /=     |             atribuição de divisão               | a /= b   |    a = a / b   |
+        |-------------------------------------------------------------|----------|----------------|
+        |    %=     |              atribuição de modulo               | a %= b   |    a = a % b   |
+        |-------------------------------------------------------------|----------|----------------|
+        |    &=     |             atribuição bitwise AND              | a &= b   |    a = a & b   |    
+        |-------------------------------------------------------------|----------|----------------|
+        |    |=     |              atribuição bitwise OR              | a |= b   |    a = a | b   |            
+        |-------------------------------------------------------------|----------|----------------|
+        |    ^=     |             atribuição bitwise XOR              | a ^= b   |    a = a ^ b   |             
+        |-------------------------------------------------------------|----------|----------------|
+        |    <<=    |      atribuição de deslocamento a esquerda      | a <<= b  |    a = a << b  |
+        |-------------------------------------------------------------|----------|----------------|
+        |    >>=    |       atribuição de deslocamento a direita      | a >>= b  |    a = a >> b  |
+        |-------------------------------------------------------------|----------|----------------|
+        |    >>>=   | atribuição de deslocamento a esquerda sem sinal | a >>>= b |    a = a >>> b |    
+        |-------------------------------------------------------------|----------|----------------|
+        
+
+    Exemplos Detalhados de Operadores de Atribuição
+        Vamos explorar cada operador de atribuição com exemplos.
+
+        1. Atribuição Simples (=)
+            O operador = atribui o valor do lado direito à variável do lado esquerdo. 
+            public class SimpleAssignmentExample {
+                public static void main(String[] args) {
+                    int a = 5;
+                    int b = 10;
+                    a = b;  // Assign the value of b to a
+
+                    System.out.println("a: " + a);  // Output: a: 10
+                }
+            }
+
+        Explicação:
+            Atribuição: O valor de b (que é 10) é atribuído a a.
+            Saída:
+            a: 10
+
+        2. Atribuição de Adição (+=)
+            O operador += adiciona o operando à direita ao operando à esquerda e atribui o resultado ao operando à esquerda.
+            public class AdditionAssignmentExample {
+                public static void main(String[] args) {
+                    int a = 5;
+                    a += 3;  // Equivalent to a = a + 3
+
+                    System.out.println("a: " + a);  // Output: a: 8
+                }
+            }
+
+        Explicação:
+            Atribuição de Adição: O valor 3 é adicionado a a, e o resultado é armazenado novamente em a.
+            Saída:
+            a: 8
+
+
+        3. Atribuição de Subtração (-=)
+            O operador -= subtrai o operando à direita do operando à esquerda e atribui o resultado ao operando à esquerda.
+            public class SubtractionAssignmentExample {
+                public static void main(String[] args) {
+                    int a = 5;
+                    a -= 2;  // Equivalent to a = a - 2
+
+                    System.out.println("a: " + a);  // Output: a: 3
+                }
+            }
+
+        Explicação:
+        Tarefa de Subtração: O valor 2 é subtraído de a, e o resultado é armazenado novamente em a.
+            Saída:
+            a: 3
+
+
+        4. Atribuição de Multiplicação (*=)
+            O operador *= multiplica o operando da esquerda pelo operando da direita e atribui o resultado ao operando da esquerda.
+            public class MultiplicationAssignmentExample {
+                public static void main(String[] args) {
+                    int a = 5;
+                    a *= 4;  // Equivalent to a = a * 4
+
+                    System.out.println("a: " + a);  // Output: a: 20
+                }
+            }
+
+        Explicação:
+            Tarefa de Multiplicação: O valor 4 é multiplicado por a, e o resultado é armazenado novamente em a.
+            Saída:
+            a: 20
+
+        
+        5. Atribuição de Divisão (/=)
+            O operador /= divide o operando da esquerda pelo operando da direita e atribui o resultado ao operando da esquerda.
+            public class DivisionAssignmentExample {
+                public static void main(String[] args) {
+                    int a = 20;
+                    a /= 4;  // Equivalent to a = a / 4
+
+                    System.out.println("a: " + a);  // Output: a: 5
+                }
+            }
+
+        Explicação:
+            Atribuição de Divisão: O valor de a é dividido por 4, e o resultado é armazenado novamente em a.
+            Saída:
+            a: 5
+
+
+        6. Atribuição de Módulo (%=)
+            O operador %= calcula o módulo do operando à esquerda com o operando à direita e atribui o resultado ao operando à esquerda.
+            public class ModulusAssignmentExample {
+                public static void main(String[] args) {
+                    int a = 10;
+                    a %= 3;  // Equivalent to a = a % 3
+
+                    System.out.println("a: " + a);  // Output: a: 1
+                }
+            }
+
+        Explicação:
+            Atribuição de Módulo: O resto de a dividido por 3 é armazenado novamente em a.
+            Saída:
+            a: 1
+
+
+Conclusão
+    Os operadores de atribuição Java são cruciais para manipular variáveis ​​e realizar operações aritméticas de forma concisa e eficiente. Ao usar operadores de 
+atribuição compostos, os desenvolvedores podem escrever código mais limpo e de fácil manutenção.
+
+
+    Resumo:
+        *   Atribuição Simples (=): Atribui o valor à direita à variável à esquerda.
+        *   Atribuição por Adição (+=): Adiciona o valor à direita à variável à esquerda.
+        *   Atribuição por Subtração (-=): Subtrai o valor à direita da variável à esquerda.
+        *   Atribuição por Multiplicação (*=): Multiplica a variável à esquerda pelo valor à direita.
+        *   Atribuição por Divisão (/=): Divide a variável à esquerda pelo valor à direita.
+        *   Atribuição por Módulo (%=): Calcula o resto da divisão da variável à esquerda pelo valor à direita.
+
