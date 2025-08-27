@@ -1,0 +1,342 @@
+Tipos de dados Java
+
+Introdução
+
+    Os tipos de dados em Java definem o tipo de dado que uma variável pode conter. Entender os tipos de dados é importante porque eles determinam como os 
+dados são armazenados e quais operações podem ser realizadas com eles. Java fornece um rico conjunto de tipos de dados, que são categorizados em tipos primitivos 
+e tipos de referência. Neste capítulo, exploraremos cada tipo de dado com exemplos e demonstraremos como eles funcionam.
+
+
+Categorias de Tipos de Dados
+
+    1. Tipos de Dados Primitivos
+
+        Tipos de dados primitivos são os tipos básicos de dados incorporados à linguagem Java. Esses tipos servem como blocos de construção para a manipulação de 
+        dados. Java possui oito tipos de dados primitivos:
+
+
+        |----------------------------------------------------------------------------------------------------|
+        | TIPO DE DADO | TAMANHO |                             DESCRIÇÃO                                     |
+        |----------------------------------------------------------------------------------------------------|
+        |     byte     | 1 byte  | Armazena números inteiros de -128 a 127                                   |
+        |----------------------------------------------------------------------------------------------------|
+        |     short    | 2 bytes | Armazena números inteiros de -32.768 a 32.767                             |
+        |----------------------------------------------------------------------------------------------------|
+        |      int     | 4 bytes | Armazena números inteiros de -2^31 a 2^31 – 1                             |
+        |----------------------------------------------------------------------------------------------------|
+        |      long    | 8 bytes | Armazena números inteiros de -2^63 a 2^63 – 1                             |
+        |----------------------------------------------------------------------------------------------------|
+        |      float   | 4 bytes | Armazena números fracionários, suficiente para armazenar de 6 a 7 dígitos |
+        |----------------------------------------------------------------------------------------------------|
+        |     double   | 8 bytes | Armazena números fracionários, suficiente para armazenar 15 dígitos       |
+        |----------------------------------------------------------------------------------------------------|
+        |      char    | 2 bytes | Armazena um único caractere/letra ou valores ASCII                        |
+        |----------------------------------------------------------------------------------------------------|
+        |     boolean  | 1 bit   | Armazena valores verdadeiro ou falso                                      |
+        |----------------------------------------------------------------------------------------------------|
+
+
+    2. Tipos de Referência
+
+        Tipos de referência em Java são objetos que armazenam referências a dados reais. Eles são mais complexos do que os tipos primitivos e incluem classes, arrays, 
+    interfaces, enumerações e anotações.
+
+        |----------------------------------------------------------------------------------------------------|
+        | TIPO DE DADO | TAMANHO |                             DESCRIÇÃO                                     |
+        |----------------------------------------------------------------------------------------------------|
+        |    String    |  varia  | Armazena uma sequência de caracteres                                      |
+        |----------------------------------------------------------------------------------------------------|
+        |     Array    |  varia  | Armazena uma coleção de itens de dados do mesmo tipo                      |
+        |----------------------------------------------------------------------------------------------------|
+        |    Class     |  varia  | Representa tipos definidos pelo usuário                                   |
+        |----------------------------------------------------------------------------------------------------|
+        |   Interface  |  varia  | Especifica métodos que uma classe deve implementar                        |
+        |----------------------------------------------------------------------------------------------------|
+        |      Enum    |  varia  | Represents a fixed set of constants                                       |
+        |----------------------------------------------------------------------------------------------------|
+        |  Annotation  |  varia  | Fornece metadados para elementos de código (classes, métodos, etc.)       |
+        |----------------------------------------------------------------------------------------------------|
+
+
+
+    Tipos de Dados Primitivos
+
+    1. byte (1 byte)
+        O tipo de dado byte é um inteiro com sinal de 8 bits.
+        Tamanho: 8 bits
+        Intervalo: -128 a 127
+        
+        Exemplo:
+        public class DataTypeExample {
+            public static void main(String[] args) {
+                byte byteValue = 10;
+                System.out.println("Byte Value: " + byteValue);
+            }
+        }
+
+        Saída:
+        Byte Value: 10
+
+
+    2. short (2 bytes)
+        O tipo de dado short é um inteiro com sinal de 16 bits.
+        Tamanho: 16 bits
+        Intervalo: -32.768 a 32.767
+        
+        Exemplo:
+        public class DataTypeExample {
+            public static void main(String[] args) {
+                short shortValue = 1000;
+                System.out.println("Short Value: " + shortValue);
+            }
+        }
+
+        Saída:
+        Valor curto: 1000
+
+
+    3. int
+        O tipo de dado int é um inteiro com sinal de 32 bits.
+        Tamanho: 32 bits (4 bytes)
+        Intervalo: -2^31 a 2^31 – 1
+
+        Exemplo:
+        public class DataTypeExample {
+            public static void main(String[] args) {
+                int intValue = 100000;
+                System.out.println("Int Value: " + intValue);
+            }
+        }
+
+        Saída:
+        Valor Int: 100000
+
+
+    4. long
+        O tipo de dado long é um inteiro com sinal de 64 bits.
+        Tamanho: 64 bits (8 bytes)
+        Intervalo: -2^63 a 2^63 – 1
+        
+        Exemplo:
+        public class DataTypeExample {
+            public static void main(String[] args) {
+                long longValue = 10000000000L;
+                System.out.println("Valor Longo: " + longValue);
+            }
+        }
+
+        Saída:
+        Valor Longo: 10000000000
+
+
+    5. float
+        O tipo de dado float é um ponto flutuante IEEE 754 de 32 bits e precisão simples.
+        Tamanho: 32 bits (4 bytes)
+        Intervalo: Aproximadamente ±3,40282347E+38F
+
+        Exemplo:
+        public class DataTypeExample {
+            public static void main(String[] args) {
+                float floatValue = 10.5f;
+                System.out.println("Float Value: " + floatValue);
+            }
+        }
+
+        Saída:
+        Valor flutuante: 10,5
+
+
+    6. double
+        O tipo de dado double é um ponto flutuante IEEE 754 de 64 bits e precisão dupla.
+        Tamanho: 64 bits (8 bytes)
+        Intervalo: Aproximadamente ±1,79769313486231570E+308
+        
+        Exemplo:
+        public class DataTypeExample {
+            public static void main(String[] args) {
+                double doubleValue = 20.99;
+                System.out.println("Double Value: " + doubleValue);
+            }
+        }
+
+        Saída:
+        Valor Duplo: 20,99
+
+    
+    7. char
+        O tipo de dado char é um único caractere Unicode de 16 bits.
+        Tamanho: 16 bits (2 bytes)
+        Intervalo: 0 a 65.535 (caracteres Unicode)
+        
+        Exemplo:
+        public class DataTypeExample {
+            public static void main(String[] args) {
+                char charValue = 'A';
+                System.out.println("Char Value: " + charValue);
+            }
+        }
+
+        Saída:
+        Valor Char: A
+
+
+    8. booleano
+        O tipo de dado booleano representa um bit de informação, mas seu "tamanho" não é definido com precisão.
+        Tamanho: 1 bit (valor lógico)
+        Valores: verdadeiro ou falso
+
+        Exemplo:
+        public class DataTypeExample {
+            public static void main(String[] args) {
+                boolean booleanValue = true;
+                System.out.println("Boolean Value: " + booleanValue);
+            }
+        }
+
+        Output:
+        Boolean Value: true   
+
+
+
+    Tipos de Dados de Referência
+
+    1. String
+        O tipo de dado String representa uma sequência de caracteres.
+
+        Exemplo:
+        public class DataTypeExample {
+            public static void main(String[] args) {
+                String stringValue = "Hello, Java!";
+                System.out.println("String Value: " + stringValue);
+            }
+        }
+
+        Saída:
+        String Value: Olá, Java!
+
+    
+    2. Matrizes
+        O tipo de dado Matriz armazena uma coleção sequencial de tamanho fixo de elementos do mesmo tipo.
+
+        Exemplo:
+        public class DataTypeExample {
+            public static void main(String[] args) {
+                int[] arrayValue = {1, 2, 3, 4, 5};
+                System.out.print("Array Values: ");
+                for (int i : arrayValue) {
+                    System.out.print(i + " ");
+                }
+            }
+        }
+
+        Saída:
+        Array Values: 1 2 3 4 5
+
+
+    3. Classe
+        O tipo de dado Classe define um modelo para a criação de objetos, fornecendo valores iniciais para o estado (variáveis-membro) e implementações de 
+    comportamento (funções-membro ou métodos).
+
+        Exemplo:
+        public class DataTypeExample {
+            public static void main(String[] args) {
+                Person person = new Person("John", 30);
+                System.out.println("Person Name: " + person.getName());
+                System.out.println("Person Age: " + person.getAge());
+            }
+        }
+
+        class Person {
+            private String name;
+            private int age;
+
+            Person(String name, int age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            public String getName() {
+                return name;
+            }
+
+            public int getAge() {
+                return age;
+            }
+        }
+        Saída:
+
+        Person Name: John
+        Person Age: 30
+
+
+    4. Interface
+        Uma Interface é um tipo de referência em Java semelhante a uma classe. É uma coleção de métodos abstratos que uma classe pode implementar.
+
+        Exemplo:
+        interface Animal {
+            void sound();
+        }
+
+        class Dog implements Animal {
+            public void sound() {
+                System.out.println("Barks");
+            }
+        }
+
+        public class DataTypeExample {
+            public static void main(String[] args) {
+                Dog dog = new Dog();
+                dog.sound();
+            }
+        }
+
+        Saída:
+        Barks
+    
+
+    5. Enum
+        Um Enum é um tipo especial de Java usado para definir coleções de constantes.
+
+        Exemplo:
+        enum Day {
+            SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY
+        }
+
+        public class DataTypeExample {
+            public static void main(String[] args) {
+                Day day
+
+        = Day.MONDAY;
+                System.out.println("Day: " + day);
+            }
+        }
+
+        Saída:
+        Day: MONDAY
+
+    
+    6. Anotação
+        Uma anotação fornece dados sobre um programa, mas não faz parte do programa em si. As anotações não têm efeito direto na operação do código que anotam.
+
+        Exemplo:
+        @interface MyAnnotation {
+            String value();
+        }
+
+        @MyAnnotation(value = "Example")
+        public class DataTypeExample {
+            public static void main(String[] args) {
+                System.out.println("Annotation Example");
+            }
+        }
+
+        Saída:
+        Annotation Example
+
+
+
+Conclusão
+    Neste capítulo, exploramos os vários tipos de dados em Java, incluindo tipos primitivos e de referência. Cada tipo de dado atende a uma finalidade específica 
+e é usado para manipular diferentes tipos de dados. Entender esses tipos de dados é fundamental para a programação em Java, pois eles ajudam a gerenciar dados com 
+eficiência e a executar diversas operações.
+
