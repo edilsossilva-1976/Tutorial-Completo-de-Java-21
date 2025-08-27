@@ -1,0 +1,153 @@
+Comentários Java
+
+
+Introdução
+
+    Comentários em Java são instruções não executáveis ​​usadas para explicar o código e torná-lo mais legível. Eles são ignorados pelo compilador Java, 
+mas são inestimáveis ​​para a documentação e a compreensão do código. Neste capítulo, exploraremos os diferentes tipos de comentários em Java e como usá-los 
+de forma eficaz.
+
+
+Tipos de Comentários em Java
+
+Java suporta três tipos de comentários:
+
+    1.  Comentários de uma única linha
+    2.  Comentários de várias linhas
+    3.  Comentários de documentação (Javadoc)
+
+
+    1. Comentários de uma única linha
+
+        Comentários de uma única linha começam com duas barras (//). Qualquer texto após // na mesma linha é considerado um comentário.
+
+        Exemplo:
+        public class CommentExample {
+            public static void main(String[] args) {
+                // This is a single-line comment
+                System.out.println("Hello, World!"); // Print statement
+            }
+        }
+
+        Saída:
+        Hello, World!
+
+
+    2. Comentários de várias linhas
+
+        Comentários de várias linhas começam com /* e terminam com */. Eles podem abranger várias linhas, o que os torna ideais para comentar blocos de 
+    código ou escrever explicações mais longas.
+
+    Exemplo:
+    public class CommentExample {
+        public static void main(String[] args) {
+            /*
+            * This is a multi-line comment
+            * It spans multiple lines
+            */
+            System.out.println("Hello, Java!");
+        }
+    }
+
+    Saída:
+    Hello, Java!
+
+
+    3. Comentários da Documentação (Javadoc)
+
+        Os comentários da documentação começam com /** e terminam com */. Eles são usados ​​para gerar documentação para o código usando a ferramenta Javadoc. 
+    Esses comentários normalmente contêm descrições de classes, métodos e campos.
+
+    Exemplo:
+    /**
+    * This class demonstrates the use of comments in Java.
+    */
+    public class CommentExample {
+
+        /**
+        * This is the main method which makes use of printMessage method.
+        * @param args Unused.
+        */
+        public static void main(String[] args) {
+            printMessage();
+        }
+
+        /**
+        * This method prints a message to the console.
+        */
+        public static void printMessage() {
+            System.out.println("Hello, Documentation!");
+        }
+    }
+
+    Saída:
+    Hello, Documentation!
+
+
+    Melhores Práticas para Usar Comentários
+
+    1. Mantenha os Comentários Claros e Concisos
+        Os comentários devem ser fáceis de entender e objetivos. Evite escrever comentários longos e difíceis de ler.
+
+    2. Use Comentários para Explicar o Porquê, Não o Quê
+        Os comentários devem explicar o raciocínio por trás do código, não o que o código está fazendo. O código em si deve ser autoexplicativo.
+
+        Exemplo:
+        // Check if the user is authenticated
+        if (user.isAuthenticated()) {
+            // Grant access to the user
+            accessGranted();
+        } else {
+            // Deny access to the user
+            accessDenied();
+        }
+
+
+    3. Atualize os Comentários Quando o Código for Alterado
+        Garanta que os comentários sejam atualizados sempre que o código correspondente for modificado. Comentários desatualizados podem ser enganosos.
+
+
+    4. Evite Comentários Óbvios
+        Evite comentários que afirmem o óbvio, pois não agregam valor.
+
+        Exemplo:
+        // This is a variable declaration
+        int number = 10;
+
+
+    5. Use Javadoc para Documentação de APIs
+        Use comentários Javadoc para documentar APIs públicas. Isso ajuda a gerar documentação profissional para o seu código.
+
+    Exemplo:
+    /**
+    * Calculates the sum of two integers.
+    * @param a The first integer.
+    * @param b The second integer.
+    * @return The sum of a and b.
+    */
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+
+    Diagram: Types of Comments in Java
+    |-----------------------------------------------|
+    |            Tipos de Comentários               |
+    |-----------------------------------------------|
+    |  Comentário de linha Simples: // Comentário   |
+    |-----------------------------------------------|
+    |  Comentário multi linhas: /*Comentário*/      |
+    |-----------------------------------------------|
+    |  Comentário de documentação: /** Comentário*/ |
+    |-----------------------------------------------|
+
+
+Conclusão
+    Neste capítulo, exploramos os diferentes tipos de comentários em Java, incluindo comentários de uma única linha, comentários de várias linhas e comentários de 
+documentação. Os comentários são essenciais para escrever código claro, compreensível e de fácil manutenção. Seguindo as práticas recomendadas para o uso de comentários, 
+você pode tornar seu código mais legível e fácil de manter, tanto para você quanto para outros que possam trabalhar nele no futuro.
+
+
+
+
+
