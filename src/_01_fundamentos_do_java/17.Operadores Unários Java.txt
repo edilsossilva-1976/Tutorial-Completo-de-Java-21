@@ -1,0 +1,180 @@
+Operadores Unários Java
+
+
+Introdução
+    Operadores unários em Java são operadores que operam em um único operando para realizar diversas operações, como incrementar/decrementar um valor, negar uma expressão 
+ou inverter o valor de um booleano. Esses operadores são ferramentas simples, porém poderosas, comumente usadas em programação para manipular variáveis.
+
+
+Pontos Principais:
+    *   Operando Único: 
+        Operadores unários operam em apenas um operando.
+
+    *   Operações Múltiplas: 
+        Incluem incremento/decremento, negação e complemento lógico.
+
+    *   Uso Comum: 
+        Frequentemente usados ​​em laços, instruções condicionais e operações aritméticas simples.
+
+
+Lista de Operadores Unários
+
+Java fornece os seguintes operadores unários:
+    |-------------------------------------------------------------------------------------------|
+    | Operator  |                 Descrição                |   Exemplo  |          Saída        |  
+    |-------------------------------------------------------------------------------------------|
+    |    +      |   Unário mais (indica valor positivo)    |     +a     | Valor positivo de a   |
+    |-------------------------------------------------------------------------------------------|
+    |    -      |    Menos unário (nega uma expressão)     |     -a     | Valor negativo de a   |    
+    |-------------------------------------------------------------------------------------------|
+    |    ++     |    Incremento (aumenta o valor em 1)     | ++a ou a-- | Incrementa a em 1     |            
+    |-------------------------------------------------------------------------------------------|
+    |    --     |    Decremento (diminui o valor em 1)     | --a ou a-- | Decrementa a em 1     |             
+    |-------------------------------------------------------------------------------------------|
+    |     !     | Complemento lógico (inverte um booleano) |     !b     |  Inverte o valor de b |              |
+    |-------------------------------------------------------------------------------------------|
+    
+
+    Exemplos Detalhados de Operadores Unários
+        Vamos explorar cada operador unário com exemplos.
+
+    1. Unário Mais (+)
+        O operador unário mais + indica que o valor do operando é positivo. Embora não altere o valor do operando, pode ser usado para maior clareza do código.
+
+        public class UnaryPlusExample {
+            public static void main(String[] args) {
+                int a = 5;
+                int positiveA = +a;  // Unary plus, keeps a positive
+
+                System.out.println("Positive value of a: " + positiveA);  // Output: Positive value of a: 5
+            }
+        }
+
+        Explicação:
+        Unário +: O operador + é usado para indicar que a é positivo, embora não altere o valor.
+
+        Saída:
+        Positive value of a: 5
+
+
+    2. Operador Unário Menos (-)
+        O operador unário menos - nega o valor do operando, convertendo um valor positivo em negativo e vice-versa.
+
+        public class UnaryMinusExample {
+            public static void main(String[] args) {
+                int a = 5;
+                int negativeA = -a;  // Unary minus, negates the value of a
+
+                System.out.println("Negative value of a: " + negativeA);  // Output: Negative value of a: -5
+            }
+        }
+
+        Explicação:
+        Unário Menos: O operador - nega o valor de a, alterando-o de positivo para negativo.
+
+        Saída:
+        Negative value of a: -5
+
+
+    3. Incremento (++)
+        O operador de incremento ++ aumenta o valor de seu operando em 1. Ele pode ser usado de duas formas:
+
+        *   Incremento Prefixado (++a): Incrementa o valor de a antes de usá-lo em uma expressão.
+        *   Incremento Sufixado (a++): Usa o valor atual de a em uma expressão e, em seguida, o incrementa.
+
+        public class IncrementExample {
+            public static void main(String[] args) {
+                int a = 5;
+                int prefixIncrement = ++a;  // Prefix increment
+                System.out.println("Prefix increment: " + prefixIncrement);  // Output: Prefix increment: 6
+
+                a = 5;
+                int postfixIncrement = a++;
+                System.out.println("Postfix increment (before increment): " + postfixIncrement);  // Output: Postfix increment (before increment): 5
+                System.out.println("Value of a after postfix increment: " + a);  // Output: Value of a after postfix increment: 6
+            }
+        }
+
+
+        Explicação:
+            *   Incremento prefixado: ++a incrementa a primeiro e depois retorna o valor incrementado.
+            *   Incremento pós-fixado: a++ retorna o valor atual de a e então o incrementa.
+
+            Saída:
+            Incremento prefixado: 6
+            Incremento pós-fixado (antes do incremento): 5
+            Valor de a após o incremento pós-fixado: 6
+
+
+    4. Decremento (–)
+        O operador de decremento -- diminui o valor de seu operando em 1. Assim como o operador de incremento, ele tem duas formas:
+
+        *   Decremento Prefixado (--a): Decrementa o valor de a antes de usá-lo em uma expressão.
+        *   Decremento Sufixado (a--): Usa o valor atual de a em uma expressão e, em seguida, o decrementa.
+
+        public class DecrementExample {
+            public static void main(String[] args) {
+                int a = 5;
+                int prefixDecrement = --a;  // Prefix decrement
+                System.out.println("Prefix decrement: " + prefixDecrement);  // Output: Prefix decrement: 4
+
+                a = 5;
+                int postfixDecrement = a--;
+                System.out.println("Postfix decrement (before decrement): " + postfixDecrement);  // Output: Postfix decrement (before decrement): 5
+                System.out.println("Value of a after postfix decrement: " + a);  // Output: Value of a after postfix decrement: 4
+            }
+        }
+
+        Explicação:
+        *   Decremento Prefixado: --a decrementa a primeiro e depois retorna o valor decrementado.
+        *   Decremento Sufixado: a-- retorna o valor atual de a e depois o decrementa.
+
+        Saída:
+        Postfix decrement (before decrement): 4
+        Decremento Sufixado (antes do decremento): 5
+        Value of a after postfix decrement: 4
+
+
+    5. Complemento Lógico (!)
+        O operador de complemento lógico ! inverte o valor de uma expressão booleana. Se a expressão for verdadeira, ela se torna falsa, e vice-versa.
+        public class LogicalComplementExample {
+            public static void main(String[] args) {
+                boolean b = true;
+                boolean notB = !b;  // Logical complement
+
+                System.out.println("b: " + b);        // Output: b: true
+                System.out.println("notB: " + notB);  // Output: notB: false
+            }
+        }
+
+        Explicação:
+        Complemento Lógico: O operador ! inverte o valor de b. Se b for verdadeiro, !b torna-se falso.
+
+        Saída:
+        b: true
+        nãoB: false
+
+
+Conclusão
+    Os operadores unários de Java são ferramentas essenciais para manipular operandos simples. Eles são comumente usados ​​em laços, condicionais e operações aritméticas, 
+fornecendo uma maneira simples, porém poderosa, de executar diversas tarefas.
+
+    Resumo:
+    *   Sinal de adição unário (+): 
+        Indica um valor positivo, embora não altere o operando.
+
+    *   Sinal de subtração unário (-): 
+        Nega o operando, transformando um valor positivo em negativo e vice-versa.
+
+    *   Incremento (++): 
+        Aumenta o valor do operando em 1. Pode ser usado como prefixo ou sufixo.
+
+    *   Decremento (--): 
+        Diminui o valor do operando em 1. Pode ser usado como prefixo ou sufixo.
+
+    *   Complemento lógico (!): 
+        Inverte o valor de um operando booleano.
+
+
+
+
