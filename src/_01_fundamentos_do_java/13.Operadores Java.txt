@@ -1,0 +1,327 @@
+Operadores Java
+
+
+Introdução
+    
+    Operadores em Java são símbolos especiais que realizam operações com variáveis ​​e valores. Eles são fundamentais para manipular dados e tomar 
+decisões dentro de um programa. Java oferece um rico conjunto de operadores que podem ser categorizados em vários tipos. Neste capítulo, exploraremos 
+cada tipo de operador em detalhes, juntamente com exemplos.
+
+
+    Sumário
+        1.  Introdução
+        2.  Operadores Aritméticos
+        3.  Operadores Unários
+        4.  Operadores de Atribuição
+        5.  Operadores Relacionais
+        6.  Operadores Lógicos
+        7.  Operadores Bitwise
+        8.  Operador Ternário
+        9.  Operadores de Deslocamento
+        10. Conclusão
+
+
+    Operadores Aritméticos
+        Operadores aritméticos são usados ​​para realizar operações matemáticas básicas, como adição, subtração, multiplicação e divisão.
+
+    |------------------------------------------------|
+    | Operator  |      Descrição      |   Exemplo    |
+    |------------------------------------------------|
+    |    +      |        Adição       |  a + b       |
+    |------------------------------------------------|
+    |    -      |       Subtração     |  a - b       |                
+    |------------------------------------------------|
+    |    *      |      Multiplicação  |  a * b       |                
+    |------------------------------------------------|
+    |    /      |         Divisão     |  a / b       |                
+    |------------------------------------------------|
+    |    %      |       Modulo        |  a % b       | 
+    |           | (resto da divisao)  |              |
+    |------------------------------------------------|
+
+    Exemplo:
+    public class ArithmeticExample {
+        public static void main(String[] args) {
+            int a = 10, b = 5;
+            System.out.println("a + b = " + (a + b));
+            System.out.println("a - b = " + (a - b));
+            System.out.println("a * b = " + (a * b));
+            System.out.println("a / b = " + (a / b));
+            System.out.println("a % b = " + (a % b));
+        }
+    }
+
+    Saída:
+    a + b = 15
+    a - b = 5
+    a * b = 50
+    a / b = 2
+    a % b = 0
+
+
+    Operadores Unários
+
+        Operadores unários operam em um único operando para realizar diversas operações, como incrementar/decrementar um valor, negar uma expressão ou 
+    inverter o valor de um booleano.
+
+    |------------------------------------------------------------|
+    | Operator  |           Descrição             |   Exemplo    |
+    |------------------------------------------------------------|
+    |    +      |         Unário mais             |    +a        |
+    |           |    (indica valor positivo)      |              |
+    |------------------------------------------------------------|
+    |    -      |          Menos unário           |    -a        |     
+    |           |      (nega uma expressão)       |              |           
+    |------------------------------------------------------------|
+    |   ++      |     Operador de incremento      |  ++a ou a++  |    
+    |           |     (aumenta o valor em 1)      |              |
+    |------------------------------------------------------------|
+    |   --      |     Operador de decremento      |  --a ou a--  |     
+    |           |     (diminui o valor em 1)      |              |
+    |------------------------------------------------------------|
+    |    !      |  Operador de complemento lógico |      !a      | 
+    |           |     (inverte valor booleano)    |              |
+    |------------------------------------------------------------|
+
+    public class UnaryExample {
+        public static void main(String[] args) {
+            int a = 10;
+            boolean b = false;
+
+            System.out.println("Unary plus: " + (+a));
+            System.out.println("Unary minus: " + (-a));
+            System.out.println("Pre-increment: " + (++a));
+            System.out.println("Post-increment: " + (a++));
+            System.out.println("After post-increment: " + a);
+            System.out.println("Pre-decrement: " + (--a));
+            System.out.println("Post-decrement: " + (a--));
+            System.out.println("After post-decrement: " + a);
+            System.out.println("Logical complement: " + (!b));
+        }
+    }
+
+    Saída:
+    Unary plus: 10
+    Unary minus: -10
+    Pre-increment: 11
+    Post-increment: 11
+    After post-increment: 12
+    Pre-decrement: 11
+    Post-decrement: 11
+    After post-decrement: 10
+    Logical complement: true
+
+
+    Operadores de Atribuição
+        Operadores de atribuição são usados ​​para atribuir valores a variáveis. O operador de atribuição básico é =, e também existem operadores de atribuição 
+    compostos para realizar operações aritméticas e atribuições em uma única etapa.
+
+    |----------------------------------------------------------|
+    | Operator  |           Descrição          |   Exemplo     |
+    |----------------------------------------------------------|
+    |    =      |      Atribuição simples      |    a = b      |
+    |----------------------------------------------------------|
+    |   +=      |     Atribuição de adição     |    a += b     |               
+    |----------------------------------------------------------|
+    |   -=      |   Atribuição de subtração    |    a -= b     |    
+    |----------------------------------------------------------|
+    |   *=      | Atribuição de multiplicação  |    a *= b     |     
+    |----------------------------------------------------------|
+    |   /=      |    Atribuição de divisão     |    a /= b     | 
+    |----------------------------------------------------------|
+    |   %=      |    Atribuição de módulo      |    a %= b     | 
+    |----------------------------------------------------------|
+
+    Example:
+    public class AssignmentExample {
+        public static void main(String[] args) {
+            int a = 10, b = 5;
+
+            a += b;
+            System.out.println("a += b: " + a);
+
+            a -= b;
+            System.out.println("a -= b: " + a);
+
+            a *= b;
+            System.out.println("a *= b: " + a);
+
+            a /= b;
+            System.out.println("a /= b: " + a);
+
+            a %= b;
+            System.out.println("a %= b: " + a);
+        }
+    }
+
+    Saída:
+    a += b: 15
+    a -= b: 10
+    a *= b: 50
+    a /= b: 10
+    a %= b: 0
+
+
+    Operadores Relacionais
+        Operadores relacionais são usados ​​para comparar dois valores. O resultado de uma operação relacional é um valor booleano: verdadeiro ou falso.
+
+    |---------------------------------------------- -|
+    |  Operator |      Descrição     |   Exemplo     |
+    |------------------------------------------------|
+    |    ==     |       Igual a      |    a == b     |
+    |----------------------------------------------  |
+    |    !=     |     Não igual a    |    a != b     |               
+    |---------------------------------------------- -|
+    |    >      |      Maior que     |    a > b      |    
+    |------------------------------------------------|
+    |    <      |      Menor que     |    a < b      |     
+    |------------------------------------------------|
+    |    >=     |  Maior ou igual a  |    a >= b     | 
+    |------------------------------------------------|
+    |    <=     |  Menor ou igual a  |    a <= b     | 
+    |------------------------------------------------|
+
+    Example:
+    public class RelationalExample {
+        public static void main(String[] args) {
+            int a = 10, b = 5;
+
+            System.out.println("a == b: " + (a == b));
+            System.out.println("a != b: " + (a != b));
+            System.out.println("a > b: " + (a > b));
+            System.out.println("a < b: " + (a < b));
+            System.out.println("a >= b: " + (a >= b));
+            System.out.println("a <= b: " + (a <= b));
+        }
+    }
+
+    Sáida:
+    a == b: false
+    a != b: true
+    a > b: true
+    a < b: false
+    a >= b: true
+    a <= b: false
+
+
+    Operadores Lógicos:
+        Logical operators are used to perform logical operations on boolean values.
+
+    |---------------------------------------------|
+    |  Operator |    Descrição        |  Exemplo  |
+    |---------------------------------------------|
+    |    &&     |   Logical AND (e)   |  a && b   |
+    |---------------------------------------------|
+    |    ||     |   logical OR (ou)   |  a || b   |               
+    |---------------------------------------------|
+    |    !      |   logical NOT (não) |    !a     |    
+    |---------------------------------------------|
+
+    Exemplo:
+    public class LogicalExample {
+        public static void main(String[] args) {
+            boolean a = true, b = false;
+
+            System.out.println("a && b: " + (a && b));
+            System.out.println("a || b: " + (a || b));
+            System.out.println("!a: " + (!a));
+        }
+    }
+
+    Saída:
+    a && b: false
+    a || b: true
+    !a: false
+
+
+    Operadores Bitwise (bit a bit):
+        Operadores bit a bit realizam operações em nível de bit em tipos inteiros.
+
+    |-------------------------------------------------------|
+    |  Operator |    Descrição               |   Exemplo    |
+    |-------------------------------------------------------|
+    |     &     |      Bitwise AND (e)       |    a & b     |
+    |-------------------------------------------------------|
+    |     |     |      Bitwise OR (ou)       |    a | b     |               
+    |-------------------------------------------------------|
+    |     ^     | Bitwise XOR (ou exclusivo) |    a^b       |    
+    |-------------------------------------------------------|
+    |     ~     |     Bitwise Complement     |     ~a       |    
+    |-------------------------------------------------------|
+
+    public class BitwiseExample {
+        public static void main(String[] args) {
+            int a = 5, b = 3;
+
+            System.out.println("a & b: " + (a & b));
+            System.out.println("a | b: " + (a | b));
+            System.out.println("a ^ b: " + (a ^ b));
+            System.out.println("~a: " + (~a));
+        }
+    }
+
+    Saída:
+    a & b: 1
+    a | b: 7
+    a ^ b: 6
+    ~a: -6
+
+
+    Operador Ternário
+        O operador ternário é uma abreviação para a instrução if-else. Ele recebe três operandos e é avaliado como um valor com base em uma condição.
+
+    |-------------------------------------------------------------------------------|
+    |  Operator |            Descrição            |             Exemplo             |
+    |-------------------------------------------------------------------------------|
+    |    ?:     | Operador ternário (condicional) | condition ? value1 : value2     |
+    |-------------------------------------------------------------------------------|
+
+    Exemplo:
+    public class TernaryExample {
+        public static void main(String[] args) {
+            int a = 10, b = 20;
+            int max = (a > b) ? a : b;
+            System.out.println("Max value: " + max);
+        }
+    }
+
+    Saída:
+    Max value: 20
+
+
+    Operadores de deslocamento:
+    |--------------------------------------------------------------------|
+    |  Operator |                  Descrição               |  Exemplo    |
+    |--------------------------------------------------------------------|
+    |    <<     |      Deslocamento para a esquerda        |   a << b    |
+    |--------------------------------------------------------------------|
+    |    >>     |       Deslocamento para a direita        |   a >> b    |
+    |--------------------------------------------------------------------|
+    |    >>>    | Deslocamento para a esquerda sem sinal   |   a >>> b   |
+    |--------------------------------------------------------------------|
+
+    Exemplo:
+    public class ShiftExample {
+        public static void main(String[] args) {
+            int a = 8; // Binary: 1000
+
+            System.out.println("a << 1: " + (a << 1)); // 16, Binary: 10000
+            System.out.println("a >> 1: " + (a >> 1)); // 4, Binary: 0100
+            System.out.println("a >>> 1: " + (a >>> 1)); // 4, Binary: 0100
+        }
+    }
+
+    Saída:
+    a << 1: 16
+    a >> 1: 4
+    a >>> 1: 4
+
+
+    Conclusão
+        Neste capítulo, abordamos os vários tipos de operadores em Java, incluindo operadores aritméticos, unários, de atribuição, relacionais, lógicos, bit a bit, 
+    ternários e de deslocamento. Entender esses operadores e como usá-los é fundamental para manipular dados e tomar decisões em seus programas Java.
+
+    
+
+
+
