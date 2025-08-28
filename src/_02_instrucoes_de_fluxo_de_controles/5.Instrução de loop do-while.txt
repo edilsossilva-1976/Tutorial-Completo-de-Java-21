@@ -1,0 +1,137 @@
+Estrutura de repetição do-while
+
+Introdução
+    O laço "do-while" é uma instrução de fluxo de controle em Java que permite a execução repetitiva de um bloco de código. Diferentemente do laço "while", o laço 
+"do-while" garante que o bloco de código seja executado pelo menos uma vez antes de verificar a condição. Isso o torna útil para situações em que o bloco de código 
+precisa ser executado pelo menos uma vez, independentemente da condição. Neste capítulo, exploraremos a sintaxe, o uso e os exemplos do laço "do-while" em Java.
+
+
+Sintaxe
+A sintaxe básica do loop do-while é a seguinte:
+do {
+    // code to be executed
+} while (condition);
+
+Pontos Principais:
+    *   O bloco de código dentro do comando do é executado uma vez antes que a condição seja testada.
+    *   Após a execução do bloco de código, a condição é avaliada.
+    *   Se a condição for verdadeira, o bloco de código é executado novamente.
+    *   Esse processo se repete até que a condição se torne falsa.
+
+
+Exemplo
+    Vamos considerar um exemplo em que usamos o loop do-while para imprimir números de 1 a 5.
+
+    Exemplo de codigo:
+    public class DoWhileExample {
+        public static void main(String[] args) {
+            int count = 1;
+            do {
+                System.out.println("Count: " + count);
+                count++;
+            } while (count <= 5);
+        }
+    }
+
+    Saída:
+    Count: 1
+    Count: 2
+    Count: 3
+    Count: 4
+    Count: 5
+
+
+Loop Infinito
+    Um laço do-while pode se tornar um laço infinito se a condição nunca se tornar falsa. Isso pode acontecer se a variável de controle do laço não for atualizada 
+corretamente.
+
+Exemplo de Laço Infinito:
+
+public class InfiniteDoWhileLoopExample {
+    public static void main(String[] args) {
+        int count = 1;
+        do {
+            System.out.println("Count: " + count);
+            // Missing count++;
+        } while (count <= 5);
+    }
+}
+
+Neste exemplo, a variável count nunca é incrementada, então a condição count <= 5 permanece verdadeira indefinidamente, causando um loop infinito.
+
+
+Usando break no loop do-while
+    A instrução break pode ser usada para sair do loop prematuramente, independentemente da condição.
+
+Exemplo com break:
+public class BreakInDoWhileExample {
+    public static void main(String[] args) {
+        int count = 1;
+        do {
+            if (count == 3) {
+                break;
+            }
+            System.out.println("Count: " + count);
+            count++;
+        } while (count <= 5);
+    }
+}
+
+Saída:
+Count: 1
+Count: 2
+
+
+Usando continue no loop do-while
+    A instrução continue ignora a iteração atual do loop e prossegue com a próxima iteração.
+
+
+Exemplo do continue
+public class ContinueInDoWhileExample {
+    public static void main(String[] args) {
+        int count = 1;
+        do {
+            if (count == 3) {
+                count++;
+                continue;
+            }
+            System.out.println("Count: " + count);
+            count++;
+        } while (count <= 5);
+    }
+}
+
+Saída:
+Count: 1
+Count: 2
+Count: 4
+Count: 5
+
+
+Diagrama: Fluxograma do Loop do-while
+
+    Start
+     |
+[initialize]
+     |
+  [execute]
+     |
+[update/check condition]
+     |
+    / \
+  True  False
+   /      \
+  |        End
+  |
+[execute]
+  |
+[update/check condition]
+  |
+  True/False (loop continues)
+
+
+Conclusão
+    O laço do-while é uma instrução de fluxo de controle útil em Java que garante que um bloco de código seja executado pelo menos uma vez antes de verificar a 
+condição. Isso é particularmente útil em cenários em que você precisa que o bloco de código seja executado pelo menos uma vez, independentemente da condição. Ao 
+entender a sintaxe e o uso do laço do-while, incluindo como gerenciar laços infinitos e usar as instruções break e continue, você pode escrever programas Java mais 
+flexíveis e eficientes.
