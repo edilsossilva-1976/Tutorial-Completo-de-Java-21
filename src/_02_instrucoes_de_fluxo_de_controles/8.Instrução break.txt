@@ -1,0 +1,182 @@
+Instrução break
+
+Introdução
+    A instrução break em Java é uma instrução de fluxo de controle usada para sair prematuramente de um loop ou de uma instrução switch. Ela pode ser particularmente 
+útil para encerrar loops antecipadamente quando uma determinada condição é atendida ou para sair de um caso switch após a execução de um caso específico. Neste capítulo, 
+exploraremos a sintaxe, o uso e os exemplos da instrução break em Java.
+
+
+Sintaxe
+A sintaxe básica da instrução break é a seguinte:
+break;
+
+
+Pontos Principais:
+    A instrução break pode ser usada dentro de loops (for, while, do-while) e instruções switch. Quando a instrução break é executada, o controle sai imediatamente do 
+loop ou da instrução switch e prossegue para a próxima instrução após o loop ou switch.
+
+
+Usando break em Loops
+
+Exemplo: Saindo de um Loop for
+
+    Vamos considerar um exemplo em que usamos a instrução break para sair de um loop for quando uma condição específica é atendida.
+
+Exemplo de codigo:
+public class BreakForLoopExample {
+    public static void main(String[] args) {
+        // Loop from 1 to 10
+        for (int i = 1; i <= 10; i++) {
+            // Exit the loop if i equals 5
+            if (i == 5) {
+                break;
+            }
+            // Print the current value of i
+            System.out.println("i: " + i);
+        }
+        // This statement is executed after the loop terminates
+        System.out.println("Loop terminated.");
+    }
+}
+
+Saída:
+i: 1
+i: 2
+i: 3
+i: 4
+Loop terminated.
+
+
+Exemplo: Saindo de um Laço "while"
+
+    Vamos considerar um exemplo em que usamos a instrução break para sair de um laço "while" quando uma condição específica é atendida.
+
+
+Exemplo de codigo:
+public class BreakWhileLoopExample {
+    public static void main(String[] args) {
+        int count = 1;
+        // Loop while count is less than or equal to 10
+        while (count <= 10) {
+            // Exit the loop if count equals 5
+            if (count == 5) {
+                break;
+            }
+            // Print the current value of count
+            System.out.println("Count: " + count);
+            count++;
+        }
+        // This statement is executed after the loop terminates
+        System.out.println("Loop terminated.");
+    }
+}
+
+Saída:
+Count: 1
+Count: 2
+Count: 3
+Count: 4
+Loop terminated.
+
+
+Exemplo: Saindo de um Loop do-while
+
+Vamos considerar um exemplo em que usamos a instrução break para sair de um loop do-while quando uma condição específica é atendida.
+Exemplo de codigo:
+public class BreakDoWhileLoopExample {
+    public static void main(String[] args) {
+        int count = 1;
+        // Loop at least once, then while count is less than or equal to 10
+        do {
+            // Exit the loop if count equals 5
+            if (count == 5) {
+                break;
+            }
+            // Print the current value of count
+            System.out.println("Count: " + count);
+            count++;
+        } while (count <= 10);
+        // This statement is executed after the loop terminates
+        System.out.println("Loop terminated.");
+    }
+}
+
+Saída:
+
+Count: 1
+Count: 2
+Count: 3
+Count: 4
+Loop terminated.
+
+
+Usando a instrução break na instrução switch
+
+Exemplo: Saindo de um caso switch
+
+Vamos considerar um exemplo em que usamos a instrução break para sair de um caso switch após executar o bloco de código correspondente.
+Exemplo de codigo:
+public class BreakSwitchExample {
+    public static void main(String[] args) {
+        int day = 3;
+        // Determine the day of the week
+        switch (day) {
+            case 1:
+                System.out.println("Monday");
+                break;
+            case 2:
+                System.out.println("Tuesday");
+                break;
+            case 3:
+                System.out.println("Wednesday");
+                break;
+            case 4:
+                System.out.println("Thursday");
+                break;
+            case 5:
+                System.out.println("Friday");
+                break;
+            case 6:
+                System.out.println("Saturday");
+                break;
+            case 7:
+                System.out.println("Sunday");
+                break;
+            default:
+                System.out.println("Invalid day");
+                break;
+        }
+    }
+}
+
+Saída:
+Wednesday
+
+
+Diagrama: Fluxograma da instrução break em um loop
+        Start
+        |
+    [initialize]
+        |
+    [condition]
+        |
+        / \
+    /   \
+    True  False
+    /         \
+[check break]  End
+ /    \
+True False
+ |     |
+End   [execute]
+       |
+     [update]
+       |
+   [condition]
+
+
+Conclusão
+    A instrução break é uma poderosa instrução de fluxo de controle em Java que permite sair de loops e alternar entre casos prematuramente. Ela aumenta a flexibilidade 
+do seu código, fornecendo uma maneira de encerrar a execução com base em condições específicas. Entender como usar a instrução break de forma eficaz pode ajudá-lo a 
+escrever programas Java mais eficientes e legíveis.
+
