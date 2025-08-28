@@ -1,0 +1,151 @@
+Declaração Switch
+
+Introdução
+    A instrução switch em Java fornece uma maneira de executar um bloco de código entre muitas opções com base no valor de uma expressão. É uma instrução de 
+fluxo de controle poderosa que pode substituir múltiplas condições if-else-if, tornando o código mais legível e fácil de gerenciar. Neste capítulo, exploraremos 
+a instrução switch em detalhes, incluindo sua sintaxe, uso e exemplos.
+
+    Sintaxe
+    A sintaxe básica da instrução switch é a seguinte:
+    switch (expression) {
+        case value1:
+            // code to be executed if expression == value1
+            break;
+        case value2:
+            // code to be executed if expression == value2
+            break;
+        // you can have any number of case statements
+        default:
+            // code to be executed if none of the cases match
+    }
+
+    Pontos Principais:
+        *   A expressão pode ser do tipo byte, short, char, int, String ou uma enumeração.
+        *   Cada palavra-chave case é seguida por um valor e dois pontos.
+        *   A instrução break é usada para sair da instrução switch. Se omitida, o programa continuará para o próximo case (fall-through).
+        *   O case padrão é opcional e executado se nenhum dos valores case corresponder à expressão.
+
+    Exemplo
+        Vamos considerar um exemplo em que usamos a instrução switch para determinar o dia da semana com base em uma entrada inteira.
+
+        Código de exemplo:
+        public class SwitchExample {
+            public static void main(String[] args) {
+                int day = 3;
+                switch (day) {
+                    case 1:
+                        System.out.println("Monday");
+                        break;
+                    case 2:
+                        System.out.println("Tuesday");
+                        break;
+                    case 3:
+                        System.out.println("Wednesday");
+                        break;
+                    case 4:
+                        System.out.println("Thursday");
+                        break;
+                    case 5:
+                        System.out.println("Friday");
+                        break;
+                    case 6:
+                        System.out.println("Saturday");
+                        break;
+                    case 7:
+                        System.out.println("Sunday");
+                        break;
+                    default:
+                        System.out.println("Invalid day");
+                        break;
+                }
+            }
+        }
+
+        Saída: 
+        Wednesday
+
+
+    Fall-Through na Instrução switch
+        Em uma instrução switch, se a instrução break for omitida, o programa continuará executando as instruções case seguintes até que um break seja encontrado ou a 
+    instrução switch seja encerrada. Esse comportamento é conhecido como "fall-through".
+
+    Código de Exemplo:
+    public class FallThroughExample {
+        public static void main(String[] args) {
+            int number = 2;
+            switch (number) {
+                case 1:
+                    System.out.println("One");
+                case 2:
+                    System.out.println("Two");
+                case 3:
+                    System.out.println("Three");
+                default:
+                    System.out.println("Default");
+            }
+        }
+    }
+
+    Saída:
+    Two
+    Three
+    Default
+
+
+    No exemplo acima, como as instruções break são omitidas, a execução continua do caso 2 para o caso 3 e depois para o caso padrão.
+
+
+    Usando Strings na Instrução switch
+        A partir do Java 7, você pode usar objetos String na instrução switch.
+
+        Código de exemplo:
+        public class StringSwitchExample {
+            public static void main(String[] args) {
+                String fruit = "Apple";
+                switch (fruit) {
+                    case "Apple":
+                        System.out.println("It's an apple.");
+                        break;
+                    case "Banana":
+                        System.out.println("It's a banana.");
+                        break;
+                    case "Cherry":
+                        System.out.println("It's a cherry.");
+                        break;
+                    default:
+                        System.out.println("Unknown fruit.");
+                        break;
+                }
+            }
+        }
+
+        Saída:
+        It's an apple.
+
+
+        Diagrama: Fluxograma da instrução switch
+
+          Start
+            |
+        [expression]
+            |
+            v
+        [switch]
+            |
+            /|\
+           / | \
+       case1 case2 ... caseN default
+        |    |      |      |
+        v    v      v      v
+      Code1 Code2 CodeN CodeD
+        |    |      |      |
+        break break break (optional)
+           \____|_____/      /
+                |           /
+               End ________/
+
+
+Conclusão
+    A instrução switch é uma instrução de fluxo de controle versátil que simplifica o processo de seleção de um entre vários caminhos de código com base no valor de uma 
+expressão. Ela melhora a legibilidade e a manutenibilidade do código em comparação com múltiplas instruções if-else-if. Entender como usar a instrução switch, incluindo 
+o comportamento de fall-through e o suporte a strings, pode ajudá-lo a escrever código Java mais limpo e eficiente.
