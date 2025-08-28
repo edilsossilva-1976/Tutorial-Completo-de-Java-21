@@ -1,0 +1,131 @@
+Instrução While
+
+Introdução
+    O laço "while" é uma das instruções fundamentais de fluxo de controle em Java que permite a execução repetitiva de um bloco de código desde que uma condição 
+especificada permaneça verdadeira. Ele é útil para situações em que o número de iterações não é conhecido previamente e o laço precisa continuar até que uma 
+determinada condição seja atendida. Neste capítulo, exploraremos a sintaxe, o uso e os exemplos do laço "while" em Java.
+
+
+Sintaxe
+    A sintaxe básica do loop while é a seguinte:
+    while (condition) {
+        // code to be executed
+    }
+
+Pontos Principais:
+    *   A condição é avaliada antes de cada iteração.
+    *   Se a condição for verdadeira, o código dentro do loop "while" é executado.
+    *   Se a condição for falsa, o loop termina e o controle passa para a próxima instrução após o loop.
+
+
+Exemplo
+    Vamos considerar um exemplo em que usamos o loop while para imprimir números de 1 a 5.
+
+    public class WhileExample {
+        public static void main(String[] args) {
+            int count = 1;
+            while (count <= 5) {
+                System.out.println("Count: " + count);
+                count++;
+            }
+        }
+    }
+
+    Saída:
+    Count: 1
+    Count: 2
+    Count: 3
+    Count: 4
+    Count: 5
+
+
+    Loop Infinito
+        Um laço while pode se tornar um laço infinito se a condição nunca se tornar falsa. Isso pode acontecer se a variável de controle do laço não for atualizada 
+corretamente.
+
+
+Exemplo de Loop Infinito:
+    public class InfiniteLoopExample {
+        public static void main(String[] args) {
+            int count = 1;
+            while (count <= 5) {
+                System.out.println("Count: " + count);
+                // Missing count++;
+            }
+        }
+    }
+
+Neste exemplo, a variável count nunca é incrementada, então a condição count <= 5 permanece verdadeira indefinidamente, causando um loop infinito.
+
+
+Usando break no loop while
+    A instrução break pode ser usada para sair do loop prematuramente, independentemente da condição.
+
+    Exemplo com break:
+    public class BreakInWhileExample {
+        public static void main(String[] args) {
+            int count = 1;
+            while (count <= 5) {
+                if (count == 3) {
+                    break;
+                }
+                System.out.println("Count: " + count);
+                count++;
+            }
+        }
+    }
+
+    Saída:
+    Count: 1
+    Count: 2
+
+
+Usando continue no loop while
+    A instrução continue ignora a iteração atual do loop e prossegue com a próxima iteração.
+
+Exemplo com continue:
+    public class ContinueInWhileExample {
+        public static void main(String[] args) {
+            int count = 1;
+            while (count <= 5) {
+                if (count == 3) {
+                    count++;
+                    continue;
+                }
+                System.out.println("Count: " + count);
+                count++;
+            }
+        }
+    }
+
+    Saída:
+    Count: 1
+    Count: 2
+    Count: 4
+    Count: 5
+
+
+    Diagrama: Fluxograma do loop while
+
+    Start
+     |
+[initialize]
+     |
+ [condition]
+     |
+    / \
+  True  False
+   /      \
+[execute]  End
+   |
+[update]
+   |
+  [condition]
+   |
+  True/False (loop continues)
+
+
+Conclusão
+    O loop while é uma poderosa instrução de fluxo de controle em Java que permite a execução repetitiva de um bloco de código com base em uma condição. É particularmente 
+útil quando o número de iterações não é conhecido antecipadamente e precisa ser controlado por uma condição. Ao compreender a sintaxe e o uso do loop while, incluindo como 
+gerenciar loops infinitos e usar as instruções break e continue, você pode escrever programas Java mais flexíveis e eficientes.
