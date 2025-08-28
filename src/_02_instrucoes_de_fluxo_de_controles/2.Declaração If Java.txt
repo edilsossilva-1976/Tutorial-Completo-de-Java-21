@@ -1,0 +1,189 @@
+Declaração If Java
+
+
+Introdução
+    A instrução if é uma das instruções fundamentais de fluxo de controle em Java, permitindo a execução de determinadas partes do código com base em condições específicas. Neste 
+capítulo, exploraremos diferentes variações da instrução if, incluindo if, if-else, if-else-if ladder e if aninhado. Cada tipo será explicado com exemplos e um fluxograma em texto 
+para ilustrar o fluxo de controle.
+
+
+Instrução if em Java
+    A instrução if executa um bloco de código se uma condição especificada for verdadeira.
+
+    Sintaxe:
+        if (condition) {
+            // code to be executed if condition is true
+        }
+
+        Exemplo:
+        public class IfExample {
+            public static void main(String[] args) {
+                int number = 10;
+                if (number > 0) {
+                    System.out.println("Positive Number");
+                }
+            }
+        }
+        Saída:
+        Positive Number
+
+    Fluxograma:
+              Start
+                |
+            [condition]
+                / \
+               /   \
+            True  False
+            /       \
+         Execute   Skip
+          Code      Code
+            /         \
+           End        End     
+                      
+
+    Instrução if-else em Java
+        A instrução if-else executa um bloco de código se uma condição for verdadeira e outro bloco de código se for falsa.
+
+        Sintaxe:
+        if (condition) {
+            // code to be executed if condition is true
+        } else {
+            // code to be executed if condition is false
+        }
+
+        Exemplo:
+        public class IfElseExample {
+            public static void main(String[] args) {
+                int number = -10;
+                if (number > 0) {
+                    System.out.println("Positive Number");
+                } else {
+                    System.out.println("Non-Positive Number");
+                }
+            }
+        }
+
+        Saída:
+        Non-Positive Number
+
+    Fluxograma:
+              Start
+                |
+            [condition]
+                / \
+               /   \
+            True  False
+            /       \
+         Execute   Execute
+          Code A    Code B
+            /         \
+           End        End     
+                     
+
+    Instrução Java if-else-if
+        A estrutura if-else-if testa múltiplas condições sequencialmente, executando o bloco de código correspondente à primeira condição verdadeira.
+
+        Sintaxe:
+        if (condition1) {
+            // code to be executed if condition1 is true
+        } else if (condition2) {
+            // code to be executed if condition2 is true
+        } else if (condition3) {
+            // code to be executed if condition3 is true
+        } else {
+            // code to be executed if all conditions are false
+        }       
+
+
+        Example:
+        public class IfElseIfExample {
+            public static void main(String[] args) {
+                int marks = 85;
+                if (marks >= 90) {
+                    System.out.println("Grade A");
+                } else if (marks >= 75) {
+                    System.out.println("Grade B");
+                } else if (marks >= 50) {
+                    System.out.println("Grade C");
+                } else {
+                    System.out.println("Grade D");
+                }
+            }
+        }
+
+        Saída:
+        Grade B
+
+    Fluxograma:
+              Start
+                |
+            [condition1]
+                / \
+               /   \
+            True  False
+            /       \
+        Code A  [condition2]
+                    / \
+                   /   \
+                True False
+                /      \
+             Code B   [condition3]
+                        / \
+                       /   \
+                    True False
+                    /      \
+                 Code C    Code D
+                    \       /
+                       End
+                      
+                      
+Declaração if aninhada Java
+
+    Uma instrução if aninhada usa uma instrução if dentro de outra instrução if para testar múltiplas condições.
+
+    Sintaxe:
+    if (condition1) {
+        // code to be executed if condition1 is true
+        if (condition2) {
+            // code to be executed if condition2 is true
+        }
+    }
+
+    Exemplo:
+    public class NestedIfExample {
+        public static void main(String[] args) {
+            int number = 10;
+            if (number > 0) {
+                if (number % 2 == 0) {
+                    System.out.println("Positive Even Number");
+                }
+            }
+        }
+    }
+
+    Sáida:
+    Positive Even Number
+
+
+    Fluxograma:
+          Start
+            |
+        [condition1]
+           / \
+          /   \
+        True  False
+         /       \
+  [condition2]   Skip
+      / \
+     /   \
+   True False
+    /     \
+   Code  Skip
+   /       \
+ End      End
+
+
+    Conclusão
+    Neste capítulo, abordamos as várias formas da instrução if em Java, incluindo if, if-else, estrutura if-else-if e if aninhado. Essas instruções de fluxo 
+de controle são essenciais para a tomada de decisões em seus programas com base em condições. Nos próximos capítulos, nos aprofundaremos em cada tipo de 
+instrução de fluxo de controle, fornecendo mais exemplos e práticas recomendadas para ajudá-lo a dominar seu uso em seus programas Java.
