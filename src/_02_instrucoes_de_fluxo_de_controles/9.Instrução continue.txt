@@ -1,0 +1,155 @@
+Instrução continue
+
+Sintaxe
+A sintaxe básica da instrução continue é a seguinte:
+continue;
+
+
+Pontos Principais:
+
+    *   A instrução continue pode ser usada dentro de loops (for, while, do-while).
+    *   Quando a instrução continue é executada, a iteração atual do loop é encerrada e o controle passa para a próxima iteração.
+
+Usando continue em Loops
+
+Exemplo: Usando continue em um Loop for
+
+Vamos considerar um exemplo em que usamos a instrução continue para pular certas iterações em um loop for.
+
+Código de exemplo:
+public class ContinueForLoopExample {
+    public static void main(String[] args) {
+        // Loop de 1 a 10
+        for (int i = 1; i <= 10; i++) {
+            // Pula a iteração se i for igual a 5
+            if (i == 5) {
+                continue;
+            }
+            // Imprime o valor atual de i
+            System.out.println("i: " + i);
+        }
+        // Esta instrução é executada após o término do loop
+        System.out.println("Loop concluído.");
+    }
+}
+
+Saída:
+i: 1
+i: 2
+i: 3
+i: 4
+i: 6
+i: 7
+i: 8
+i: 9
+i: 10
+Loop completed.
+
+
+Exemplo: Usando continue em um loop while
+Vamos considerar um exemplo em que usamos a instrução continue para pular certas iterações em um loop while.
+
+Código de exemplo:
+public class ContinueWhileLoopExample {
+    public static void main(String[] args) {
+        int count = 1;
+        // Loop enquanto count for menor ou igual a 10
+        while (count <= 10) {
+            // Pula a iteração se count for igual a 5
+            if (count == 5) {
+                count++;
+                continue;
+            }
+            // Exibe o valor atual de count
+            System.out.println("Count: " + count);
+            count++;
+        }
+    // Esta instrução é executada após o término do loop
+    System.out.println("Loop concluído.");
+    }
+}
+
+Saída:
+Count: 1
+Count: 2
+Count: 3
+Count: 4
+Count: 6
+Count: 7
+Count: 8
+Count: 9
+Count: 10
+Loop completed.
+
+
+Exemplo: Usando continue em um loop do-while
+
+Vamos considerar um exemplo em que usamos a instrução continue para pular certas iterações em um loop do-while.
+
+Código de exemplo:
+public class ContinueDoWhileLoopExample {
+    public static void main(String[] args) {
+        int count = 1;
+        // Faz um loop pelo menos uma vez, então enquanto count for menor ou igual a 10
+        do {
+            // Pula a iteração se count for igual a 5
+            if (count == 5) {
+                count++;
+                continue;
+            }
+            // Exibe o valor atual de count
+            System.out.println("Count: " + count);
+            count++;
+        } while (count <= 10);
+        // Esta instrução é executada após o término do loop
+        System.out.println("Loop concluído.");
+    }
+}
+
+Saída:
+Count: 1
+Count: 2
+Count: 3
+Count: 4
+Count: 6
+Count: 7
+Count: 8
+Count: 9
+Count: 10
+Loop completed.
+
+
+Usando continue em Loops Aninhados
+
+A instrução continue também pode ser usada em loops aninhados para pular iterações do loop interno com base em uma condição.
+
+Código de exemplo:
+public class ContinueNestedLoopExample {
+    public static void main(String[] args) {
+        // Outer loop iterates from 1 to 3
+        for (int i = 1; i <= 3; i++) {
+            // Inner loop iterates from 1 to 3
+            for (int j = 1; j <= 3; j++) {
+                // Skip the iteration if j equals 2
+                if (j == 2) {
+                    continue;
+                }
+                // Print the current values of i and j
+                System.out.println("i: " + i + ", j: " + j);
+            }
+        }
+    }
+}
+
+Saída:
+i: 1, j: 1
+i: 1, j: 3
+i: 2, j: 1
+i: 2, j: 3
+i: 3, j: 1
+i: 3, j: 3
+
+Conclusão
+    A instrução continue é uma poderosa instrução de fluxo de controle em Java que permite pular a iteração atual de um loop e prosseguir para a próxima. Ela aumenta 
+a flexibilidade do seu código, fornecendo uma maneira de pular certas iterações com base em condições específicas, sem sair do loop inteiro. Entender como usar a 
+instrução continue de forma eficaz pode ajudá-lo a escrever programas Java mais eficientes e legíveis.
