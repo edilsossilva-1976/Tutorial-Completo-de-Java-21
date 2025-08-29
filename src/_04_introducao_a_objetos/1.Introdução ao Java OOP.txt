@@ -1,0 +1,287 @@
+Introdução a Programação orientada a objetos
+
+Introdução
+    Programação Orientada a Objetos (POO) é um paradigma de programação que utiliza objetos e classes para organizar código e dados. POO é um conceito 
+fundamental em Java e é usado para modelar entidades e relacionamentos do mundo real, tornando o código mais modular, reutilizável e sustentável. Neste 
+capítulo, exploraremos os princípios básicos da POO e como eles são implementados em Java.
+
+
+Sumário
+    1.  O que é Programação Orientada a Objetos?
+    2.  Princípios de POO
+    3.  Classes e Objetos
+    4.  Encapsulamento
+    5.  Herança
+    6.  Polimorfismo
+    7.  Abstração
+    8.  Conclusão
+
+    1. O que é Programação Orientada a Objetos?
+    Programação Orientada a Objetos (POO) é um paradigma de programação baseado no conceito de "objetos", que podem conter dados na forma de campos 
+(também conhecidos como atributos ou propriedades) e código na forma de métodos (também conhecidos como funções ou procedimentos). A POO visa implementar 
+entidades do mundo real, como herança, polimorfismo, encapsulamento e abstração na programação.
+
+
+    2. Princípios da POO
+    Existem quatro princípios principais da Programação Orientada a Objetos:
+
+    *   Encapsulamento
+
+    *   Herança
+        Herança é o mecanismo pelo qual uma classe (filha ou subclasse) pode herdar campos e métodos de outra classe (pai ou superclasse). Isso permite a 
+        reutilização do código e a criação de um relacionamento hierárquico entre as classes.
+
+    *   Polimorfismo
+        O polimorfismo permite que métodos façam coisas diferentes com base no objeto sobre o qual atuam, mesmo que compartilhem o mesmo nome. Existem dois 
+        tipos de polimorfismo: em tempo de compilação (sobrecarga de métodos) e em tempo de execução (sobreposição de métodos).
+
+
+    *   Abstração
+        Abstração é o conceito de ocultar os detalhes complexos de implementação e mostrar apenas os recursos necessários de um objeto. Ajuda a reduzir a 
+        complexidade e o esforço de programação.
+
+
+    *   Encapsulamento
+        Encapsulamento é o conceito de agrupar dados (variáveis) e métodos (funções) que operam sobre os dados em uma única unidade chamada classe. Ele 
+        restringe o acesso direto a alguns componentes de um objeto, o que pode impedir a modificação acidental dos dados.
+
+
+    3. Classes e Objetos
+
+    Classe
+    Uma classe é um modelo para a criação de objetos. Ela define um tipo de dado agrupando dados e métodos que trabalham com os dados em uma única unidade.
+
+    Exemplo: Definindo uma Classe
+    
+    public class Car {
+        // Campos (atributos)
+        String color;
+        String model;
+
+        // Construtor
+        public Car(String color, String model) {
+            this.color = color;
+            this.model = model;
+        }
+
+        // Método
+        public void displayDetails() {
+            System.out.println("Car model: " + model + ", Color: " + color);
+        }
+    }
+
+    Objeto
+    Um objeto é uma instância de uma classe. Ele é criado usando a palavra-chave new.
+
+    Exemplo: Criando um Objeto
+    public class Main {
+        public static void main(String[] args) {
+            
+            // Criando um objeto da classe Car
+            Car myCar = new Car("Red", "Toyota");
+            
+            // Chamando um método no objeto
+            myCar.displayDetails();
+        }
+    }
+
+    Saída:
+    Modelo do carro: Toyota, Cor: Vermelho
+
+    4. Encapsulamento
+    O encapsulamento restringe o acesso direto a alguns componentes de um objeto, o que é um meio de evitar interferências não intencionais e o uso indevido 
+    dos dados.
+
+    Exemplo: Encapsulamento
+    public class Person {
+        // Private fields
+        private String name;
+        private int age;
+
+        // Public getter and setter methods
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public int getAge() {
+            return age;
+        }
+
+        public void setAge(int age) {
+            if (age > 0) {
+                this.age = age;
+            } else {
+                System.out.println("Age cannot be negative or zero.");
+            }
+        }
+    }
+
+    Exemplo: Usando Encapsulamento
+    public class Main {
+        public static void main(String[] args) {
+    
+            // Criando um objeto da classe Person
+            Person person = new Person();
+    
+            // Definindo valores usando métodos setter
+            person.setName("John");
+            person.setAge(30);
+    
+            // Obtendo valores usando métodos getter
+            System.out.println("Nome: " + person.getName());
+            System.out.println("Idade: " + person.getAge());
+        }
+    }
+
+
+    Saída:
+    Nome: John
+    Idade: 30
+
+
+    5. Herança
+    Herança é um mecanismo pelo qual uma nova classe herda as propriedades e o comportamento de uma classe existente.
+
+    Exemplo: Herança
+    // Parent class
+    public class Animal {
+        public void eat() {
+            System.out.println("This animal eats food.");
+        }
+    }
+
+    // Classe filha
+    public class Dog extends Animal {
+        public void bark() {
+            System.out.println("The dog barks.");
+        }
+    }
+
+
+    Exemplo: Usando Herança
+    public class Main {
+        public static void main(String[] args) {
+        
+        // Criando um objeto da classe Cachorro
+        Cachorro meuCachorro = new Cachorro();
+    
+        // Chamando métodos das classes pai e filha
+        meuCachorro.comer(); // Método herdado da classe Animal
+        meuCachorro.latir(); // Método da classe Cachorro
+        }
+    }
+
+    Saída:
+    Este animal come comida.
+    O cachorro late.
+
+
+    6. Polimorfismo
+    O polimorfismo permite que métodos executem tarefas diferentes com base no objeto sobre o qual atuam.
+
+    Exemplo: Sobrecarga de Métodos (Polimorfismo em Tempo de Compilação)
+    public class Calculator {
+        // Método para somar dois inteiros
+        public int add(int a, int b) {
+            return a + b;
+        }
+
+        // Método para somar três inteiros
+        public int add(int a, int b, int c) {
+            return a + b + c;
+        }
+    }
+
+    Exemplo: Usando Sobrecarga de Métodos
+    public class Main {
+        public static void main(String[] args) {
+        
+        // Criando um objeto da classe Calculator
+        Calculator calc = new Calculator();
+    
+        // Chamando os métodos sobrecarregados
+        System.out.println("Soma de 2 e 3: " + calc.add(2, 3));
+        System.out.println("Soma de 1, 2 e 3: " + calc.add(1, 2, 3));
+        }
+    }
+
+    Saída:
+    Soma de 2 e 3: 5
+    Soma de 1, 2 e 3: 6
+
+
+    Exemplo: Sobreposição de Método (Polimorfismo em Tempo de Execução)
+    // Classe pai
+    public class Animal {
+        public void sound() {
+        System.out.println("Este animal faz um som.");
+        }
+    }
+
+    // Classe filha
+    public class Cat extends Animal {
+        @Override
+        public void sound() {
+        System.out.println("O gato mia.");
+        }
+    }
+
+    Exemplo: Usando Sobreposição de Método
+    public class Main {
+        public static void main(String[] args) {
+        
+        // Criando um objeto da classe Cat
+        Animal myCat = new Cat();
+    
+        // Chamando o método sobrescrito
+        myCat.sound();
+        }
+    }
+
+    Saída:
+    O gato mia.
+
+
+    7. Abstração
+    Abstração é o conceito de ocultar os detalhes complexos de implementação e mostrar apenas os recursos necessários de um objeto.
+
+    Exemplo: Classe Abstrata
+    // Classe Abstrata
+    public abstract class Shape {
+        // Método abstrato (não possui corpo)
+        public abstract void draw();
+    }
+
+    // Classe Concreta
+    public class Circle extends Shape {
+        @Override
+        public void draw() {
+            System.out.println("Desenhando um círculo.");
+        }
+    }
+
+    Exemplo: Usando a Classe Abstrata
+    public class Main {
+        public static void main(String[] args) {
+    
+        // Criando um objeto da classe Circle
+        Shape myShape = new Circle();
+        
+        // Chamando o método abstrato
+        myShape.draw();
+        }
+    }
+
+    Saída:
+    Desenhando um círculo.
+
+
+Conclusão
+    A Programação Orientada a Objetos (POO) em Java fornece uma estrutura robusta para a construção de código modular, reutilizável e sustentável. Ao 
+compreender e aplicar os princípios básicos da POO — encapsulamento, herança, polimorfismo e abstração —, você pode criar aplicações Java complexas e 
+eficientes. Neste capítulo, exploramos os conceitos fundamentais da POO e demonstramos como eles são implementados em Java por meio de vários exemplos.
+
